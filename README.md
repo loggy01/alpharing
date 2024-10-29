@@ -1,1 +1,3 @@
-# alpharing
+# AlphaRING
+
+AlphaRING is undergoing a few big changes and will be updated here next week...
