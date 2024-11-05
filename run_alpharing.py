@@ -5,19 +5,21 @@ import os
 import subprocess
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 import plotly.express as px
-import plotly.graph_objs as go
+import plotly.graph_objects as go
 import plotly.io as pio
 from absl import app, flags, logging
+from Bio import SeqIO
 
 flags.DEFINE_list(
     'fasta_paths',
     None,
-    'Paths to FASTA files, each containing a prediction target that will be '
-    'folded one after another. Paths should be separated by commas. All FASTA '
-    'paths must have a unique basename as the basename is used to name the output '
-    'directories for each prediction.'
+    'Paths to two FASTA files: the first should be the wild-type monomer and the ' 
+    'second should be the missense variant. The two paths should be separated by ' 
+    'a comma and have different basenames as the basename is used to name the ' 
+    'output directories for the wild-type and variant predictions.'
 )
 
 flags.DEFINE_string(
@@ -121,16 +123,57 @@ WEIGHT_FORMULAS = {
 }
 
 
+def check_fastas(fasta_paths):
+    """
+    Checks if the FASTAs represent a variant and returns the position.
+    
+    Args:
+        fasta_paths: List of paths to FASTAs provided in the command-line flags.
+    
+    Returns:
+        Position where the sequences differ.
+    """
+    # Check if exactly two FASTA paths are provided
+    if len(fasta_paths) != 2:
+        raise ValueError("Exactly two FASTA paths must be provided.")
+    
+    # Check if both FASTA files contain exactly one sequence
+    sequences = []
+    for fasta_path in fasta_paths:
+        with open(fasta_path, "r") as fasta:
+            for protein in SeqIO.parse(fasta, "fasta"):
+                sequences.append(str(protein.seq))
+    if len(sequences) != 2:
+        raise ValueError("Both FASTA files must contain exactly one sequence.")
+    
+    # Check if the sequences have the same length
+    wildtype_sequence, variant_sequence = sequences
+    if len(wildtype_sequence) != len(variant_sequence):
+        raise ValueError("Wildtype and variant sequences must have the same length.")
+    
+    # Find the variant position
+    differences =[
+        (i, a, b) 
+        for i, (a, b) in enumerate(zip(wildtype_sequence, variant_sequence)) 
+        if a != b
+    ]
+    if len(differences) != 1:
+        raise ValueError("Wildtype and variant sequences must differ by one residue.")
+    variant_position = differences[0][0]
+    
+    return variant_position
+
+
 def run_alphafold(flags, flag_names):
     """
-    Runs AlphaFold with input and returns the best model for each FASTA.
+    Runs AlphaFold with input and returns the best model for both FASTAs.
     
     Args:
         flags: Object containing the values of the command-line flags.
         flag_names: List of the names of the command-line flags.
     
     Returns:
-        List of paths to the best AlphaFold models.
+        List of paths to the best wild-type and variant model.
     """
     # Define the base AlphaFold command
     alpharing_dir = Path(__file__).parent
@@ -165,10 +208,10 @@ def run_alphafold(flags, flag_names):
 
 def run_ring(model_paths):
     """
-    Runs RING with the AlphaFold models and returns their edges and nodes.
+    Runs RING with both AlphaFold models and returns their edges and nodes.
     
     Args:
-        model_paths: List of paths to the best AlphaFold models.
+        model_paths: List of paths to the best wild-type and variant model.
     
     Returns:
         Tuple of lists of paths to the RING edges and nodes.
@@ -253,7 +296,7 @@ def calculate_node_weights(node_paths, edges_all):
         nodes['Weight'] = nodes.index.map(
             edges.groupby('NodeId1')['Weight'].sum()
             .add(edges.groupby('NodeId2')['Weight'].sum(), fill_value=0)
-        )
+        ).fillna(0)
         nodes.reset_index(inplace=True)
         
         # Save the current updated nodes file
@@ -267,18 +310,17 @@ def calculate_node_weights(node_paths, edges_all):
 
 def plot_node_weights(nodes_all, model_paths):
     """
-    Plots the node weights for each model.
+    Plots the node weights for the wild-type and variant model.
     
     Args:
         nodes_all: List of RING node pandas DataFrames with weights.
-        model_paths: List of paths to the best AlphaFold models.
+        model_paths: List of paths to the best wild-type and variant model.
         
     Returns:
-        None (but saves each node weight plot to file).
+        None
     """
     # Prepare the node weight plots for each model
     for nodes, model_path in zip(nodes_all, model_paths):
-        node_total = len(nodes)
         node_names = [
             f"{node_id.split(':')[3][0]}"
             f"{node_id.split(':')[3][1:].lower()}"
@@ -289,7 +331,7 @@ def plot_node_weights(nodes_all, model_paths):
         maximum_weight = nodes['Weight'].max()
         minimum_weight = nodes['Weight'].min()
         normalised_weights = (
-            [0.5] * node_total if maximum_weight == minimum_weight 
+            [0.5] * len(nodes) if maximum_weight == minimum_weight 
             else (nodes['Weight'] - minimum_weight) / (maximum_weight - minimum_weight)
         )
         
@@ -337,23 +379,60 @@ def plot_node_weights(nodes_all, model_paths):
         output_dir = Path(model_path).parent
         figure_path = os.path.join(output_dir, figure_name)
         pio.write_html(figure, figure_path)
+        
+
+def calculate_alpharing_score(nodes_all, model_paths, variant_position):
+    """
+    Calculates the AlphaRING score for the missense variant.
+
+    Args:
+        nodes_all: List of RING node pandas DataFrames with weights.
+        model_paths: List of paths to the best wild-type and variant model.
+        variant_position: Position where the sequences differ.
+
+    Returns:
+        None
+    """
+    # Get the weight of the residue at the variant position (wildtype and variant)
+    weights = []
+    for nodes in nodes_all:
+        weight = nodes.iloc[variant_position]['Weight']
+        weights.append(weight)
+
+    # Calculate the AlphaRING score
+    wildtype_weight, variant_weight = [weight + 1 for weight in weights]
+    fold_change = variant_weight / wildtype_weight
+    alpharing_score = abs(np.log2(fold_change))
+
+    # Write the AlphaRING score to a file in the variant directory
+    variant_model_path = model_paths[1]
+    variant_output_dir = Path(variant_model_path).parent
+    output_file_path = os.path.join(variant_output_dir, 'alpharing_score.txt')
+    with open(output_file_path, 'w') as file:
+        file.write(f"{alpharing_score}\n")
 
 
 def main(_):
+    logging.info('(AlphaRING) Checking FASTA files')
+    variant_position = check_fastas(FLAGS.fasta_paths)
+    
     logging.info('(AlphaRING) Running AlphaFold:')
     model_paths = run_alphafold(FLAGS, FLAG_NAMES)
 
     logging.info('(AlphaRING) Running RING:')
     edge_paths, node_paths = run_ring(model_paths)
 
-    logging.info('(AlphaRING) Calculating edge weights')
+    logging.info('(AlphaRING) Calculating edge (bond) weights')
     edges_all = calculate_edge_weights(edge_paths, WEIGHT_FORMULAS)
     
-    logging.info('(AlphaRING) Calculating node weights')
+    logging.info('(AlphaRING) Calculating node (residue) weights')
     nodes_all = calculate_node_weights(node_paths, edges_all)
     
     logging.info('(AlphaRING) Plotting node weights')
     plot_node_weights(nodes_all, model_paths)
+    
+    logging.info('(AlphaRING) Calculating AlphaRING score')
+    calculate_alpharing_score(nodes_all, model_paths, variant_position)
 
 
 if __name__ == '__main__':
