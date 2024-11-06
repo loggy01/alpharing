@@ -50,6 +50,10 @@ For any given missense variant, AlphaRING conducts the following workflow
 
    The second flavour of bond-specific formulas is used for instances where a shorter distance and larger angle is favourable ():
 
+   $$
+   weight_{bond} = energy \times \left( \left(1 - \left(\frac{distance}{distance_{max}}\right)\right) + \left(\frac{angle}{angle_{max}}\right)\right)
+   $$
+
    The third and final flavour of bond-specific formulas is used for instances where a shorter distance is favourable but the importance of angle is negligible ():
 
    
