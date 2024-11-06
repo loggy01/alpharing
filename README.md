@@ -56,6 +56,9 @@ For any given missense variant, AlphaRING conducts the following workflow
 
    The third and final flavour of bond-specific formulas is used for instances where a shorter distance is favourable but the importance of angle is negligible ():
 
+   $$
+   weight_{bond} = energy \times 2 \times \left(1 - \left(\frac{distance}{distance_{max}}\right)\right)
+   $$
    
 
 7. **Calculate fold change (FC)**:
