@@ -1,8 +1,8 @@
 # AlphaRING
 
-AlphaRING is a customised implementation of [AlphaFold2](https://github.com/google-deepmind/alphafold) that uses the [RING4](https://ring.biocomputingup.it/) standalone package to capture non-covalent interactions at the atomic level in monomeric protein models. By piping together AlphaFold2 and RING4, AlphaRING extends upon both package's capabilities to predict the pathogenicity of any given missense variant based on the predicted changes in non-covalent bond formation between the wild-type monomeric protein model and its missense variant counterpart.
+AlphaRING is a package for the prediction of pathogenicity of any given missense variant. The package is a customised implementation of [AlphaFold2](https://github.com/google-deepmind/alphafold) that models a monomeric wild-type protein and a variant counterpart, and captures their non-covalent bonds using [RING4](https://ring.biocomputingup.it/). AlphaRING uses the differences in non-covalent bond formation to predict the pathogenicity of the missense variant.
 
-An associated AlphaRING paper is currently under review by the [RECOMB 2025](https://recomb.org/recomb2025/index.html) conference and will be made available upon completion. Additionally, the AlphaRING benchmark dataset and the code used to generate it will be made available soon. 
+An AlphaRING manuscript is currently under review by [RECOMB 2025](https://recomb.org/recomb2025/index.html). AlphaRING benchmarking data will be made available soon.
 
 ## Overview
 
@@ -14,62 +14,62 @@ An associated AlphaRING paper is currently under review by the [RECOMB 2025](htt
 
 <p align='center'> <strong>Figure 1</strong> Overview of the AlphaRING workflow </p>
 
-For any given missense variant, AlphaRING conducts the following workflow
+For any given missense variant, AlphaRING conducts the following workflow:
 
 1. **Accept FASTAs**: 
 
-   In this step, AlphaRING accepts two FASTAs: firstly, a FASTA representing a monomeric wild-type protein, and secondly, a FASTA representing a monomeric missense variant protein. We define a  
-   missense variant as differing from its paired wild-type by exactly one residue. AlphaRING will not accept anything else in place of this.
+   In this step, AlphaRING accepts two FASTAs: a monomeric wild-type protein and a counterpart missense variant differing by a residue.
 
 2. **Predict structures**: 
 
-   In this step, AlphaFold2 is used to predict the three-dimensional structure of the wild-type and variant proteins. The best model of each is relaxed–to improve local geometry–and collected.
+   In this step, AlphaFold2 is used to predict the structure of the wild-type and variant proteins. The best model of each is relaxed and extracted.
 
-> [!NOTE]
-> Whilst AlphaRING provides the AlphaFold2 neural network to make predictions, the user must download the genetic databases AlphaFold2 uses to make its predictions as per the package's [guidelines](https://github.com/google-deepmind/alphafold?tab=readme-ov-file#installation-and-running-your-first-prediction).
-
-4. **Perform residue interaction network (RIN) analysis**
+3. **Perform residue interaction network (RIN) analysis**
 
    In this step, RING4 is used to generate a RIN of both the wild-type and variant models, capturing their non-covalent interactions at the atomic level.
 
 > [!NOTE]
-> To this date, the RING4 standalone package has not been open-sourced. Therefore, the user must reuqest a [RING4 licence](https://biocomputingup.it/services/download/), which is free for academic users. To ensure compatibility, the user is advised to ask for RING4 version v4.0-2-ge939f57.
+> RING4 refers to bonds as "edges" and residues as "nodes". AlphaRING's source code extensively uses this terminology.
 
-5. **Calculate residue weightings**
+4. **Calculate residue weightings**
 
-   In this step, AlphaRING assigns each non-covalent bond (hydrogen, ionic, π-cation, π-π stacking, and π-hydrogen) in the wild-type and variant RINs a weighting of importance to the stability 
-   of the respective protein. The weightings are calculated using novel bond-type specific formulas that take into account bond-specific energy and geometry values provided by RING4. As the 
-   energy values provided by RING4 are fixed for a given bond-type, our formulas consider bond distance and angle to multiply the energy of a bond by a value between 0-2. Both distance and angle 
-   can provide a value between 0-1 to this multiplier, a value closer to 1 being more favourable.
+   In this step, AlphaRING assigns each non-covalent bond (hydrogen, ionic, π-cation, π-π stacking, and π-hydrogen) a weighting of importance to protein stability.
 
-   Our bond-specific formulas come in three flavours. The first flavour is used for instances where a shorter distance and smaller angle is favourable (π-cation and π-π stacking bonds):
+   Weightings are calculated using novel bond-type specific formulas that take into account bond-specific energy and geometry values provided by RING4. As the energy values provided by RING4 are 
+   fixed for a given bond-type, our formulas consider the variable bond distance and angle to multiply energy by a value between 0 and 2. Both distance and angle can contribute a value between 0 
+   and 1 towards the multiplier. More favourable distances and angles result in a larger multiplier. Therefore, a higher bond weighting indicates greater importance to protein stability. 
+
+   Our bond-type specific formulas come in three flavours. The first flavour is used for instances where a shorter distance and smaller angle is favourable (π-cation and π-π stacking bonds):
    
    $$
    weight_{bond} = energy \times \left( \left(1 - \left(\frac{distance}{distance_{max}}\right)\right) + \left(1 - \left(\frac{angle}{angle_{max}}\right)\right) \right)
    $$
 
-   <p align='center'> <strong>Formula 1</strong> Overview of the AlphaRING workflow </p>
-
-   The second flavour of bond-specific formulas is used for instances where a shorter distance and larger angle is favourable (hydrogen bonds):
+   The second flavour of bond-type specific formulas is used for instances where a shorter distance and larger angle is favourable (hydrogen bonds):
 
    $$
-   weight_{bond} = energy \times \left( \left(1 - \left(\frac{distance}{distance_{max}}\right)\right) + \left(\frac{angle}{angle_{max}}\right)\right)
+   Bond_{weight} = energy \times \left( \left(1 - \left(\frac{distance}{distance_{max}}\right)\right) + \left(\frac{angle}{angle_{max}}\right)\right)
    $$
 
-   <p align='center'> <strong>Formula 2</strong> Overview of the AlphaRING workflow </p>
-
-   The third and final flavour of bond-specific formulas is used for instances where a shorter distance is favourable but the importance of angle is negligible (ionic and π-hydrogen bonds):
+   The third and final flavour of bond-type specific formulas is used for instances where a shorter distance is favourable but the contribution of angle is negligible (ionic and π-hydrogen 
+   bonds):
 
    $$
    weight_{bond} = energy \times 2 \times \left(1 - \left(\frac{distance}{distance_{max}}\right)\right)
    $$
 
-   <p align='center'> <strong>Figure 1</strong> Overview of the AlphaRING workflow </p>
+   Each residue's weight in the wildtype and variant proteins is then calculated by summing the weight of all its bonds.
    
-
 7. **Calculate fold change (FC)**:
 
-8. **Calculate AlphaRING score**:
+   In this step, AlphaRING calculates the fold change between the weight of the wild-type and variant residue at the position of residue substiution. Therefore, values futher from 1 indicate a 
+   greater change in weighting.
+
+
+9. **Calculate AlphaRING score**:
+
+    In this step, the absolute log2 of the FC is taken to provide a final numeric value of pathogenicity, the AlphaRING score. This results in a minimum score of 0. Therefore, higher scores 
+    indicate greater predicted pathogenicity.
 
 ## Installation
 
