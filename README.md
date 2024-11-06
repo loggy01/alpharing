@@ -16,5 +16,6 @@ An associated AlphaRING paper is currently under review by the [RECOMB 2025](htt
 AlphaRING conducts the following workflow:
 
 &nbsp;&nbsp;&nbsp;**1. Accept FASTAs:**
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this step, AlphaRING accepts two FASTAs: firstly, a FASTA representing a monomeric wild-type protein, and secondly, a FASTA representing a monomeric missense variant protein. We define a missense variant as differing from its paired wild-type by exactly one residue. AlphaRING will not accept anything else in place of this.
  
