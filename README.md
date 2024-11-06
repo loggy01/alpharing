@@ -8,5 +8,5 @@ AlphaRING is a customised implementation of [AlphaFold2](https://github.com/goog
 
 ![](https://github.com/loggy01/alpharing/blob/main/images/fig_1.png)
 <p align="center">
-  **Figure 1** Overview of the AlphaRING pipeline
+  <b>Figure 1</b> Overview of the AlphaRING pipeline
 </p>
