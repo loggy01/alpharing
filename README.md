@@ -18,4 +18,4 @@ An associated AlphaRING paper is currently under review by the [RECOMB 2025](htt
 AlphaRING conducts the following workflow:
 
 
-**1. Accept monomeric wild-type and missense variant FASTAs:**
+> **1. Accept monomeric wild-type and missense variant FASTAs:**
