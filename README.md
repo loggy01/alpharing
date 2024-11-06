@@ -7,9 +7,8 @@ An AlphaRING manuscript is currently under review by [RECOMB 2025](https://recom
 ## Overview
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./images/fig_1.png">
-  <source media="(prefers-color-scheme: light)" srcset="./images/fig_1.png">
-  <img alt="Shows the AlphaRING pipeline, which is described below." src="./images/fig_1.png">
+  <source srcset="./images/fig_1.png">
+  <img alt="Shows the AlphaRING workflow." src="./images/fig_1.png">
 </picture>
 
 <p align='center'> <strong>Figure 1</strong> Overview of the AlphaRING workflow </p>
@@ -18,15 +17,15 @@ For any given missense variant, AlphaRING conducts the following workflow:
 
 1. **Accept FASTAs**: 
 
-   In this step, AlphaRING accepts two FASTAs: a monomeric wild-type protein and a counterpart missense variant differing by a residue.
+   In this step, AlphaRING accepts two FASTAs: a monomeric wild-type protein and a counterpart missense variant differing by a single residue.
 
 2. **Predict structures**: 
 
-   In this step, AlphaFold2 is used to predict the structure of the wild-type and variant proteins. The best model of each is relaxed and extracted.
+   In this step, AlphaFold2 is used to predict the structure of the wild-type and variant protein. The best model of each is relaxed and extracted.
 
-3. **Perform residue interaction network (RIN) analysis**
+3. **Generate residue interaction networks (RINs)**
 
-   In this step, RING4 is used to generate a RIN of both the wild-type and variant models, capturing their non-covalent interactions at the atomic level.
+   In this step, RING4 is used to generate a RIN of both the wild-type and variant model, capturing their non-covalent interactions.
 
 > [!NOTE]
 > RING4 refers to bonds as "edges" and residues as "nodes". AlphaRING's source code extensively uses this terminology.
@@ -58,18 +57,17 @@ For any given missense variant, AlphaRING conducts the following workflow:
    Bond_{weight} = energy \times 2 \times \left(1 - \left(\frac{distance}{distance_{max}}\right)\right)
    $$
 
-   Each residue's weight in the wildtype and variant proteins is then calculated by summing the weight of all its bonds.
+   Each residue's weight in the wildtype and variant protein is then calculated by summing the weight of all its bonds.
    
-7. **Calculate fold change (FC)**:
+5. **Calculate fold change (FC)**:
 
    In this step, AlphaRING calculates the fold change between the weight of the wild-type and variant residue at the position of residue substiution. Therefore, values futher from 1 indicate a 
    greater change in weighting.
 
+6. **Calculate AlphaRING score**:
 
-9. **Calculate AlphaRING score**:
-
-    In this step, the absolute log2 of the FC is taken to provide a final numeric value of pathogenicity, the AlphaRING score. This results in a minimum score of 0. Therefore, higher scores 
-    indicate greater predicted pathogenicity.
+    In this step, the absolute log2 of the FC is taken to provide a final numeric value of pathogenicity, the AlphaRING score. This results in a minimum AlphaRING score of 0. Therefore, higher 
+    scores indicate greater predicted pathogenicity.
 
 ## Installation
 
