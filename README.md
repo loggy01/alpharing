@@ -1,4 +1,4 @@
-# **AlphaRING**
+# AlphaRING
 
 # About AlphaRING
 
@@ -7,6 +7,6 @@ AlphaRING is a customised implementation of [AlphaFold2](https://github.com/goog
 ## Overview
 
 ![](https://github.com/loggy01/alpharing/blob/main/images/fig_1.png)
-<center>
-**Figure 1** Overview of the AlphaRING pipeline
-</center>
+<p align="center">
+  **Figure 1** Overview of the AlphaRING pipeline
+</p>
