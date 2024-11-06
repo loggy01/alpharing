@@ -43,10 +43,9 @@ For any given missense variant, AlphaRING conducts the following workflow
    can provide a value between 0-1 to this multiplier, a value closer to 1 being more favourable.
 
    Our bond-specific formulas come in three flavours. The first flavour is used for instances where a shorter distance and smaller angle is favourable ():
-
-$$
-E = mc^2
-$$
+   $$
+   E = mc^2
+   $$
 
    The second flavour of bond-specific formulas is used for instances where a shorter distance and smaller angle is favourable ():
 
