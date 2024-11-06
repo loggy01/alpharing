@@ -25,8 +25,8 @@ For any given missense variant, AlphaRING conducts the following workflow
 
    In this step, AlphaFold2 is used to predict the three-dimensional structure of the wild-type and variant proteins. The best model of each is relaxed–to improve local geometry–and collected. 
 
-
-Whilst AlphaRING provides the AlphaFold2 neural network to make these predictions, the user must download the genetic databases AlphaFold2 uses to make its predictions as per the package's [guidelines](https://github.com/google-deepmind/alphafold?tab=readme-ov-file#installation-and-running-your-first-prediction).
+> [!NOTE]
+> Whilst AlphaRING provides the AlphaFold2 neural network to make predictions, the user must download the genetic databases AlphaFold2 uses to make its predictions as per the package's [guidelines](https://github.com/google-deepmind/alphafold?tab=readme-ov-file#installation-and-running-your-first-prediction).
 
 4. **Perform residue interaction network (RIN) analysis**
 
