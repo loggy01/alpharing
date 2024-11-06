@@ -42,7 +42,7 @@ For any given missense variant, AlphaRING conducts the following workflow:
    Our bond-type specific formulas come in three flavours. The first flavour is used for instances where a shorter distance and smaller angle is favourable (π-cation and π-π stacking bonds):
    
    $$
-   weight_{bond} = energy \times \left( \left(1 - \left(\frac{distance}{distance_{max}}\right)\right) + \left(1 - \left(\frac{angle}{angle_{max}}\right)\right) \right)
+   Bond_{weight} = energy \times \left( \left(1 - \left(\frac{distance}{distance_{max}}\right)\right) + \left(1 - \left(\frac{angle}{angle_{max}}\right)\right) \right)
    $$
 
    The second flavour of bond-type specific formulas is used for instances where a shorter distance and larger angle is favourable (hydrogen bonds):
@@ -55,7 +55,7 @@ For any given missense variant, AlphaRING conducts the following workflow:
    bonds):
 
    $$
-   weight_{bond} = energy \times 2 \times \left(1 - \left(\frac{distance}{distance_{max}}\right)\right)
+   Bond_{weight} = energy \times 2 \times \left(1 - \left(\frac{distance}{distance_{max}}\right)\right)
    $$
 
    Each residue's weight in the wildtype and variant proteins is then calculated by summing the weight of all its bonds.
