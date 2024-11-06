@@ -24,16 +24,16 @@ For any given missense variant, AlphaRING conducts the following workflow
 2. **Predict structures**: 
 
    In this step, AlphaFold2 is used to predict the three-dimensional structure of the wild-type and variant proteins. The best model of each is relaxed–to improve local geometry–and collected.
-   
-   > [!NOTE]
-   > Whilst AlphaRING provides the AlphaFold2 neural network to make predictions, the user must download the genetic databases AlphaFold2 uses to make its predictions as per the package's 
-   [guidelines](https://github.com/google-deepmind/alphafold?tab=readme-ov-file#installation-and-running-your-first-prediction).
+
+> [!NOTE]
+> Whilst AlphaRING provides the AlphaFold2 neural network to make predictions, the user must download the genetic databases AlphaFold2 uses to make its predictions as per the package's [guidelines](https://github.com/google-deepmind/alphafold?tab=readme-ov-file#installation-and-running-your-first-prediction).
 
 4. **Perform residue interaction network (RIN) analysis**
 
-   In this step, RING4 is used to generate a RIN of both the wild-type and variant models, capturing their non-covalent interactions at the atomic level. To this date, the RING4 standalone 
-   package has not been open-sourced. Therefore, the user must reuqest a [RING4 licence](https://biocomputingup.it/services/download/), which is free for academic users. To ensure compatibility, 
-   the user is advised to ask for RING4 version v4.0-2-ge939f57.
+   In this step, RING4 is used to generate a RIN of both the wild-type and variant models, capturing their non-covalent interactions at the atomic level.
+
+> [!NOTE]
+> To this date, the RING4 standalone package has not been open-sourced. Therefore, the user must reuqest a [RING4 licence](https://biocomputingup.it/services/download/), which is free for academic users. To ensure compatibility, the user is advised to ask for RING4 version v4.0-2-ge939f57.
 
 > [!NOTE]
 > RING4 uses graph terminology, referring to bonds as "edges" and residues as "nodes". Therefore, these terms are frequently used throughout the source code of AlphaRING.
