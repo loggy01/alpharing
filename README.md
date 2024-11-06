@@ -11,5 +11,11 @@ An associated AlphaRING paper is currently under review by the [RECOMB 2025](htt
 
 ![](https://github.com/loggy01/alpharing/blob/main/images/fig_1.png)
 <p align="center">
-  <b>Figure 1</b> Overview of the AlphaRING pipeline
+  <b>Figure 1</b> Overview of the AlphaRING workflow
 </p>
+
+
+AlphaRING conducts the following workflow:
+
+
+**1. Accept monomeric wild-type and missense variant FASTAs:**
