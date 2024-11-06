@@ -42,23 +42,29 @@ For any given missense variant, AlphaRING conducts the following workflow
    energy values provided by RING4 are fixed for a given bond-type, our formulas consider bond distance and angle to multiply the energy of a bond by a value between 0-2. Both distance and angle 
    can provide a value between 0-1 to this multiplier, a value closer to 1 being more favourable.
 
-   Our bond-specific formulas come in three flavours. The first flavour is used for instances where a shorter distance and smaller angle is favourable ():
+   Our bond-specific formulas come in three flavours. The first flavour is used for instances where a shorter distance and smaller angle is favourable (π-cation and π-π stacking bonds):
    
    $$
    weight_{bond} = energy \times \left( \left(1 - \left(\frac{distance}{distance_{max}}\right)\right) + \left(1 - \left(\frac{angle}{angle_{max}}\right)\right) \right)
    $$
 
-   The second flavour of bond-specific formulas is used for instances where a shorter distance and larger angle is favourable ():
+   <p align='center'> <strong>Formula 1</strong> Overview of the AlphaRING workflow </p>
+
+   The second flavour of bond-specific formulas is used for instances where a shorter distance and larger angle is favourable (hydrogen bonds):
 
    $$
    weight_{bond} = energy \times \left( \left(1 - \left(\frac{distance}{distance_{max}}\right)\right) + \left(\frac{angle}{angle_{max}}\right)\right)
    $$
 
-   The third and final flavour of bond-specific formulas is used for instances where a shorter distance is favourable but the importance of angle is negligible ():
+   <p align='center'> <strong>Formula 2</strong> Overview of the AlphaRING workflow </p>
+
+   The third and final flavour of bond-specific formulas is used for instances where a shorter distance is favourable but the importance of angle is negligible (ionic and π-hydrogen bonds):
 
    $$
    weight_{bond} = energy \times 2 \times \left(1 - \left(\frac{distance}{distance_{max}}\right)\right)
    $$
+
+   <p align='center'> <strong>Figure 1</strong> Overview of the AlphaRING workflow </p>
    
 
 7. **Calculate fold change (FC)**:
