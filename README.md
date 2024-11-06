@@ -35,17 +35,28 @@ For any given missense variant, AlphaRING conducts the following workflow
 > [!NOTE]
 > To this date, the RING4 standalone package has not been open-sourced. Therefore, the user must reuqest a [RING4 licence](https://biocomputingup.it/services/download/), which is free for academic users. To ensure compatibility, the user is advised to ask for RING4 version v4.0-2-ge939f57.
 
-> [!NOTE]
-> RING4 uses graph terminology, referring to bonds as "edges" and residues as "nodes". Therefore, these terms are frequently used throughout the source code of AlphaRING.
-
 5. **Calculate residue weightings**
 
    In this step, AlphaRING assigns each non-covalent bond (hydrogen, ionic, π-cation, π-π stacking, and π-hydrogen) in the wild-type and variant RINs a weighting of importance to the stability 
-   of the respective protein. The weightings are calculated using novel bond-type specific formulas that take into account bond-specific energy and geometry values provided per bond by RING4.
+   of the respective protein. The weightings are calculated using novel bond-type specific formulas that take into account bond-specific energy and geometry values provided by RING4. As the 
+   energy values provided by RING4 are fixed for a given bond-type, our formulas consider bond distance and angle to multiply the energy of a bond by a value between 0-2. Both distance and angle 
+   can provide a value between 0-1 to this multiplier, a value closer to 1 being more favourable.
 
-6. **Calculate fold change (FC)**:
+   Our bond-specific formulas come in three flavours. The first flavour is used for instances where a shorter distance and smaller angle is favourable ():
 
-7. **Calculate AlphaRING score**:
+$$
+E = mc^2
+$$
+
+   The second flavour of bond-specific formulas is used for instances where a shorter distance and smaller angle is favourable ():
+
+   The third and final flavour of bond-specific formulas is used for instances where a shorter distance is favourable but the importance of angle is negligible ():
+
+   
+
+7. **Calculate fold change (FC)**:
+
+8. **Calculate AlphaRING score**:
 
 ## Installation
 
