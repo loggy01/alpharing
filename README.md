@@ -45,7 +45,7 @@ For any given missense variant, AlphaRING conducts the following workflow
    Our bond-specific formulas come in three flavours. The first flavour is used for instances where a shorter distance and smaller angle is favourable ():
    
    $$
-   weight_{bond} = energy * ((1 - (distance / distance_{max})) + (1 - (angle / angle_{max})))
+   \text{weight}_{\text{bond}} = \text{energy} \times \left(1 - \frac{\text{distance}}{\text{distance}_{\text{max}}}\right) + \left(1 - \frac{\text{angle}}{\text{angle}_{\text{max}}}\right)
    $$
 
    The second flavour of bond-specific formulas is used for instances where a shorter distance and larger angle is favourable ():
