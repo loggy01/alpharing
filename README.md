@@ -71,15 +71,15 @@ For any given missense variant, AlphaRING conducts the following workflow:
 
 Before installation, you will need a machine running Linux and a modern NVIDIA GPU. In addition, ensure you have the following dependencies:  
 
-1. [AlphaFold2 genetic databases](https://github.com/google-deepmind/alphafold/tree/f251de6613cb478207c732bf9627b1e853c99c2f#installation-and-running-your-first-prediction) (databases for AlphaFold-Multimer are not required) 
+- [AlphaFold2 genetic databases](https://github.com/google-deepmind/alphafold/tree/f251de6613cb478207c732bf9627b1e853c99c2f#installation-and-running-your-first-prediction) (databases for AlphaFold-Multimer are not required) 
 
-2. [RING4](https://biocomputingup.it/services/download/) (request version v4.0-2-ge939f57)  
+- [RING4](https://biocomputingup.it/services/download/) (request version v4.0-2-ge939f57)  
 
-3. [Git](https://git-scm.com/downloads)
+- [Git](https://git-scm.com/downloads)
 
-4. [wget](https://www.tecmint.com/install-wget-in-linux/)
+- [wget](https://www.tecmint.com/install-wget-in-linux/)
  
-5. [Anaconda3](https://www.anaconda.com/download)
+- [Anaconda3](https://www.anaconda.com/download)
 
 ## Installation
 
