@@ -90,7 +90,7 @@ git clone --recurse-submodules https://github.com/loggy01/alpharing
 cd ./alpharing
 ```
 
-`wget` `stereo_chemical_props.txt` into the `alphafold` subdirectory:
+`wget` `stereo_chemical_props.txt` into the `alphafold` subdir:
 
 ```bash
 wget -P alphafold/alphafold/common/ https://git.scicore.unibas.ch/schwede/openstructure/-/raw/7102c63615b64735c4941278d92b554ec94415f8/modules/mol/alg/src/stereo_chemical_props.txt
@@ -145,6 +145,17 @@ source activate alpharing
 
 ## Downstream analysis
 
+For any given missense variant, AlphaRING will generate two subdirs within `output_dir`: one for and named after the wild-type FASTA, and one for and named after the variant FASTA.
 
+In addition to the regular AlphaFold2 and RING4 output, each subdir will contain a version of the `ringEdges` and `ringNodes` files with a `Weight` column attached. The latter file type is plotted and saved as an interactive residue `weightPlot` HTML:
 
+<picture>
+  <source srcset="./images/fig_2.png">
+  <img alt="Shows a pair of wild-type and variant residue weightPlots." src="./images/fig_2.png">
+</picture>
 
+<p align='center'> <strong>Figure 2</strong> Example of a pair of wild-type and variant weightPlots</p>
+
+The HTML can be used to visually compare weights of a substituted residue between a wild-type and variant, or be used for exploratory analysis of unsubstituted residues. Additionally, the HTML file can be saved as a PNG.
+
+Finally, the variant subdir will contain an `alpharing_score.txt` file, which only contains the AlphaRING score of the missense variant.
