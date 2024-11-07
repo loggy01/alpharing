@@ -2,7 +2,9 @@
 
 AlphaRING is a package for the prediction of pathogenicity of any given missense variant. The package is a customised implementation of [AlphaFold2](https://github.com/google-deepmind/alphafold) that models a monomeric wild-type protein and a missense variant counterpart, and captures their non-covalent bonds using [RING4](https://ring.biocomputingup.it/). AlphaRING uses the differences in non-covalent bond formation to predict the pathogenicity of the missense variant.
 
-> [!NOTE] 
+> [!NOTE]
+> AlphaRING's source code refers to bonds as edges and residues as nodes.
+>  
 > An AlphaRING manuscript is currently under review by [RECOMB 2025](https://recomb.org/recomb2025/index.html). 
 >
 > AlphaRING benchmarking data will be made available soon...
