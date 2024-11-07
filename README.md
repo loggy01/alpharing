@@ -97,12 +97,12 @@ wget -P alphafold/alphafold/common/ https://git.scicore.unibas.ch/schwede/openst
 
 `cp` your RING4 directory into the `alpharing` directory:
 
-> [!NOTE]
-> Replace `<directory>` with the name of your RING4 directory.
-
 ```bash
 cp -r ../<directory> ring
 ```
+
+> [!NOTE]
+> Replace `<directory>` with the name of your RING4 directory.
 
 `conda create` the `AlphaRING` environment and `source activate` it:
 
