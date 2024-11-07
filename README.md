@@ -55,7 +55,7 @@ For any given missense variant, AlphaRING conducts the following workflow:
 > Bond_{weight} = energy \times 2 \times \left(1 - \left(\frac{distance}{distance_{max}}\right)\right)
 > ```
 
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Each residue's weight in the wild-type and variant proteins is calculated by summing the weight of all its bonds.
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Each residue's weight in the wild-type and variant proteins is calculated by summing the weight of its bonds.
    
 5. **Calculate fold change (FC)**:
 
