@@ -78,7 +78,7 @@ For any given missense variant, AlphaRING conducts the following workflow:
 >  
 > 2. [RING4](https://biocomputingup.it/services/download/): To ensure compatibility, request version v4.0-2-ge939f57.  
 >
-> 3. [Git](https://git-scm.com/downloads).
+> 3. [Git](https://git-scm.com/downloads)
 >    
 > 4. [Anaconda3](https://www.anaconda.com/download)
 
