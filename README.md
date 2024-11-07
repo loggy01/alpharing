@@ -99,8 +99,10 @@ wget -P alphafold/alphafold/common/ https://git.scicore.unibas.ch/schwede/openst
 `cp` your RING4 directory into the `alpharing` directory:
 
 ```bash
-cp -r ../<directory> ring
+cp -r ../<dir> ring
 ```
+> [!NOTE]
+> Replace `<dir>` with the name of your RING4 directory.
 
 `conda create` the `alpharing` environment and `source activate` it:
 
@@ -135,6 +137,8 @@ source activate alpharing
   --pdb70_database_path=<path to pdb70> \
   --use_gpu_relax=<whether to relax with GPU i.e. True or False>
 ```
+> [!NOTE]
+> Replace argument values with your own.
 
 > [!WARNING]
 > These are the minimum requirements to run AlphaRING. Specific users (particularly HPC users) may need to include other modules and more in their shell script.  
