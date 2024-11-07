@@ -2,7 +2,9 @@
 
 AlphaRING is a package for the prediction of pathogenicity of any given missense variant. The package is a customised implementation of [AlphaFold2](https://github.com/google-deepmind/alphafold) that models a monomeric wild-type protein and a variant counterpart, and captures their non-covalent bonds using [RING4](https://ring.biocomputingup.it/). AlphaRING uses the differences in non-covalent bond formation to predict the pathogenicity of the missense variant.
 
-An AlphaRING manuscript is currently under review by [RECOMB 2025](https://recomb.org/recomb2025/index.html). AlphaRING benchmarking data will be made available soon.
+An AlphaRING manuscript is currently under review by [RECOMB 2025](https://recomb.org/recomb2025/index.html). 
+
+AlphaRING benchmarking data will be made available soon...
 
 ## Overview
 
@@ -17,7 +19,7 @@ For any given missense variant, AlphaRING conducts the following workflow:
 
 1. **Accept FASTAs**: 
 
-   In this step, AlphaRING accepts two FASTAs: a monomeric wild-type protein and a counterpart missense variant differing by a single residue.
+   In this step, AlphaRING accepts two FASTAs: a monomeric wild-type protein and a counterpart variant differing by a single residue.
 
 2. **Predict structures**: 
 
@@ -25,7 +27,7 @@ For any given missense variant, AlphaRING conducts the following workflow:
 
 3. **Generate residue interaction networks (RINs)**
 
-   In this step, RING4 is used to generate a RIN of both the wild-type and variant model, capturing their non-covalent interactions.
+   In this step, RING4 is used to generate a RIN of both the wild-type and variant model, capturing their non-covalent bonds.
 
 > [!NOTE]
 > RING4 refers to bonds as "edges" and residues as "nodes". AlphaRING's source code extensively uses this terminology.
@@ -35,13 +37,13 @@ For any given missense variant, AlphaRING conducts the following workflow:
    In this step, AlphaRING assigns each non-covalent bond (hydrogen, ionic, π-cation, π-π stacking, and π-hydrogen) a weighting of importance to protein stability.
 
    Weightings are calculated using novel bond-type specific formulas that take into account bond-specific energy and geometry values provided by RING4. As the energy values provided by RING4 are 
-   fixed for a given bond-type, our formulas consider the variable bond distance and angle to multiply energy by a value between 0 and 2. Both distance and angle can contribute a value between 0 
-   and 1 towards the multiplier. More favourable distances and angles result in a larger multiplier. Therefore, a higher bond weighting indicates greater importance to protein stability. 
+   fixed for a given bond-type, our formulas consider the variable bond distance and angle to multiply energy by a value between `0 and 2`. Both distance and angle can contribute a value between `0 
+   and 1` towards the multiplier. More favourable distances and angles result in a larger multiplier. Therefore, a higher bond weighting indicates greater importance to protein stability. 
 
    Our bond-type specific formulas come in three flavours. The first flavour is used for instances where a shorter distance and smaller angle is favourable (π-cation and π-π stacking bonds):
    
    $$
-   ```Bond_{weight} = energy \times \left( \left(1 - \left(\frac{distance}{distance_{max}}\right)\right) + \left(1 - \left(\frac{angle}{angle_{max}}\right)\right) \right)```
+   Bond_{weight} = energy \times \left( \left(1 - \left(\frac{distance}{distance_{max}}\right)\right) + \left(1 - \left(\frac{angle}{angle_{max}}\right)\right) \right)
    $$
 
    The second flavour of bond-type specific formulas is used for instances where a shorter distance and larger angle is favourable (hydrogen bonds):
@@ -61,13 +63,13 @@ For any given missense variant, AlphaRING conducts the following workflow:
    
 5. **Calculate fold change (FC)**:
 
-   In this step, AlphaRING calculates the fold change between the weight of the wild-type and variant residue at the position of residue substiution. Therefore, values futher from 1 indicate a 
+   In this step, AlphaRING calculates the FC between the weight of the wild-type and variant residue at the position of substiution. Therefore, values futher from `1` indicate a 
    greater change in weighting.
 
 6. **Calculate AlphaRING score**:
 
-    In this step, the absolute log2 of the FC is taken to provide a final numeric value of pathogenicity, the AlphaRING score. This results in a minimum AlphaRING score of 0. Therefore, higher 
-    scores indicate greater predicted pathogenicity.
+    In this step, the absolute log2 of the FC is taken to provide a final metric, the AlphaRING score. This results in a minimum AlphaRING score of `0`. Therefore, higher 
+    AlphaRING scores indicate greater predicted pathogenicity.
 
 ## Installation
 
@@ -82,26 +84,26 @@ For any given missense variant, AlphaRING conducts the following workflow:
 >    
 > 4. [Anaconda3](https://www.anaconda.com/download)
 
-Firstly, clone the AlphaRING repository (into the same parent directory as RING4):
+Firstly, clone the AlphaRING repository (into the same parent directory as RING4) and `cd` into it:
 
 ```bash
 git clone --recurse-submodules https://github.com/loggy01/alpharing
+cd ./alpharing
 ```
 
-Add stereo_chemical_props.txt to AlphaFold2:
+Add stereo_chemical_props.txt to the `alphafold` subdirectory:
 
 ```bash
-cd alpharing
 wget -P alphafold/alphafold/common/ https://git.scicore.unibas.ch/schwede/openstructure/-/raw/7102c63615b64735c4941278d92b554ec94415f8/modules/mol/alg/src/stereo_chemical_props.txt
 ```
 
-Copy in your RING4 directory (replace "directory" with the name of your RING4 directory):
+Copy in your RING4 directory (replace `directory` with the name of your RING4 directory):
 
 ```bash
-cp -r ../<directory> ring
+cp -r ../directory ring
 ```
 
-Create an AlphaRING envrionment in which to run AlphaRING:
+Create an AlphaRING envrionment in which to run AlphaRING and `source activate` it:
 
 ```bash
 conda create -n alpharing -c bioconda -c conda-forge hhsuite hmmer kalign2 openmm=8.0.0 pdbfixer python=3.10
