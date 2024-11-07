@@ -41,22 +41,19 @@ For any given missense variant, AlphaRING conducts the following workflow:
 > Bond_{weight} = energy \times \left( \left(1 - \left(\frac{distance}{distance_{max}}\right)\right) + \left(1 - \left(\frac{angle}{angle_{max}}\right)\right) \right)
 > ```
 
-
-   The second flavour is used when a shorter distance and larger angle is favourable (hydrogen bonds):
+   &nbsp;&nbsp;&nbsp;&nbsp;The second flavour is used when a shorter distance and larger angle is favourable (hydrogen bonds):
 
 >```math
 > Bond_{weight} = energy \times \left( \left(1 - \left(\frac{distance}{distance_{max}}\right)\right) + \left(\frac{angle}{angle_{max}}\right)\right)
 > ```
 
-
-   The third flavour is used when a shorter distance is favourable and angle is negligible (ionic and π-hydrogen bonds):
+   &nbsp;&nbsp;&nbsp;&nbsp;The third flavour is used when a shorter distance is favourable and angle is negligible (ionic and π-hydrogen bonds):
 
 >```math
 > Bond_{weight} = energy \times 2 \times \left(1 - \left(\frac{distance}{distance_{max}}\right)\right)
 > ```
 
-
-   Each residue's weight in the wild-type and variant protein is calculated by summing the weight of all its bonds.
+   &nbsp;&nbsp;&nbsp;&nbsp;Each residue's weight in the wild-type and variant protein is calculated by summing the weight of all its bonds.
    
 5. **Calculate fold change (FC)**:
 
