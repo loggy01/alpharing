@@ -71,10 +71,13 @@ For any given missense variant, AlphaRING conducts the following workflow:
 
 ## Installation
 
-> [!NOTE]
-> Before installation, you will need a machine running Linux and a modern NVIDIA GPU. In addition, ensure you have the following dependencies:
+:::note
+Before installation, you will need a machine running Linux and a modern NVIDIA GPU. In addition, ensure you have the following dependencies:
 
-> 1.
+1. Dependency One
+2. Dependency Two
+3. Dependency Three
+:::
 
 ## Usage
 
