@@ -41,7 +41,7 @@ For any given missense variant, AlphaRING conducts the following workflow:
 > Bond_{weight} = energy \times \left( \left(1 - \left(\frac{distance}{distance_{max}}\right)\right) + \left(1 - \left(\frac{angle}{angle_{max}}\right)\right) \right)
 > ```
 
-   &nbsp;&nbsp;&nbsp;&nbsp;The second flavour is used when a shorter distance and larger angle is favourable (hydrogen bonds):
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The second flavour is used when a shorter distance and larger angle is favourable (hydrogen bonds):
 
 >```math
 > Bond_{weight} = energy \times \left( \left(1 - \left(\frac{distance}{distance_{max}}\right)\right) + \left(\frac{angle}{angle_{max}}\right)\right)
