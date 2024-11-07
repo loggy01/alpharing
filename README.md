@@ -73,15 +73,15 @@ For any given missense variant, AlphaRING conducts the following workflow:
 > [!NOTE]  
 > Before installation, you will need a machine running Linux and a modern NVIDIA GPU. In addition, ensure you have the following dependencies:  
 >  
-> 1. [AlphaFold2 genetic databases](https://github.com/google-deepmind/alphafold/tree/f251de6613cb478207c732bf9627b1e853c99c2f#installation-and-running-your-first-prediction) (databases for AlphaFold-Multimer are not required) 
+> [AlphaFold2 genetic databases](https://github.com/google-deepmind/alphafold/tree/f251de6613cb478207c732bf9627b1e853c99c2f#installation-and-running-your-first-prediction) (databases for AlphaFold-Multimer are not required) 
 >  
-> 2. [RING4](https://biocomputingup.it/services/download/) (request version v4.0-2-ge939f57)  
+> [RING4](https://biocomputingup.it/services/download/) (request version v4.0-2-ge939f57)  
 >
-> 3. [Git](https://git-scm.com/downloads)
+> [Git](https://git-scm.com/downloads)
 >    
-> 4. [wget](https://www.tecmint.com/install-wget-in-linux/)
+> [wget](https://www.tecmint.com/install-wget-in-linux/)
 >    
-> 5. [Anaconda3](https://www.anaconda.com/download)
+> [Anaconda3](https://www.anaconda.com/download)
 
 Firstly, `git clone` the AlphaRING repository (into the same parent directory as RING4) and `cd` into it:
 
@@ -120,53 +120,34 @@ pip install absl-py==1.0.0 biopython==1.79 chex==0.1.86 dm-haiku==0.0.12 dm-tree
 
 ## Usage
 
-`source activate` the `AlphaRING` environment and run the script `run_alpharing.py` as follows:
+`source activate` the `AlphaRING` environment and run the script `run_alpharing.py` in a shell script as follows:
 
 ```bash
 source activate AlphaRING
 run_alpharing.py \
   --fasta_paths=<path to wild-type FASTA>,<path to variant FASTA> \
-  --max_template_date=<yyyy-mm-dd> \
-  --data_dir=path to alphafold genetic databases \
-  --output_dir=path to directory to save all results \
-  --uniref90_database_path=path to uniref90.fasta \
-  --mgnify_database_path=path to mgy_clusters_2022_05.fa \
-  --template_mmcif_dir=path to mmcif_files \
-  --obsolete_pdbs_path=path to obsolete.dat \
-  --bfd_database_path=path to bfd_metaclust_clu_complete_id30_c90_final_seq.sorted_opt \
-  --uniref30_database_path=path to UniRef30_2021_03 \
-  --pdb70_database_path=path to pdb70 \
-  --use_gpu_relax=whether to relax with GPU
+  --max_template_date=<yyyy-mm-dd e.g. 2020-01-15> \
+  --data_dir=<path to AlphaFold2 genetic databases dir> \
+  --output_dir=<path to dir to save all results> \
+  --uniref90_database_path=<path to uniref90.fasta> \
+  --mgnify_database_path=<path to mgy_clusters_2022_05.fa> \
+  --template_mmcif_dir=<path to mmcif_files dir> \
+  --obsolete_pdbs_path=<path to obsolete.dat> \
+  --bfd_database_path=<path to bfd_metaclust_clu_complete_id30_c90_final_seq.sorted_opt> \
+  --uniref30_database_path=<path to UniRef30_2021_03> \
+  --pdb70_database_path=<path to pdb70> \
+  --use_gpu_relax=<whether to relax with GPU i.e. True or False>
 ```
 
 > [!NOTE]  
-> Explanation of arguments:  
+> Ensure each `<path>` is replaced with the actual path.
 >
-> 1. `fasta_paths`:
+> Ensure `<yyyy-mm-dd e.g. 2020-01-15>` is replaced with the actual date.
 >
-> 2. `max_template_date`:
->
-> 3. `data_dir`:
-> 
-> 4. `output_dir`:
->
-> 5. `uniref90_database_path`:
->
-> 6. `mgnify_database_path`:
->
-> 7. `template_mmcif_dir`:
->    
-> 8. `obsolete_pdbs_path`:
->
-> 9. `bfd_database_path`:
->
-> 10. `uniref30_database_path`:
->
-> 11. `pdb70_database_path`:
->
-> 12. `use_gpu_relax`:
->
-> All arguments are required.
+> Ensure `<whether to relax with GPU i.e. True or False>` is replaced with `True` or `False`.
+
+> [!WARNING]
+> This is the minimum requirement to run AlphaRING. Specific users (particuarly HPC users) may need to include other packages in their shell script.  
 
 ## Downstream analysis
 
