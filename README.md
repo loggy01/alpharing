@@ -95,7 +95,7 @@ cd alpharing
 wget -P alphafold/alphafold/common/ https://git.scicore.unibas.ch/schwede/openstructure/-/raw/7102c63615b64735c4941278d92b554ec94415f8/modules/mol/alg/src/stereo_chemical_props.txt
 ```
 
-Copy in your RING4 directory (replace <directory> with the name of your RING4 directory):
+Copy in your RING4 directory (replace "<directory>" with the name of your RING4 directory):
 
 ```bash
 cp -r <directory> ring
