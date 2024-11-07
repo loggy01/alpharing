@@ -98,7 +98,7 @@ wget -P alphafold/alphafold/common/ https://git.scicore.unibas.ch/schwede/openst
 Copy in your RING4 directory (replace "directory" with the name of your RING4 directory):
 
 ```bash
-cp -r directory ring
+cp -r ../directory ring
 ```
 
 Create an AlphaRING envrionment in which to run AlphaRING:
