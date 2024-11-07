@@ -98,7 +98,7 @@ wget -P alphafold/alphafold/common/ https://git.scicore.unibas.ch/schwede/openst
 Copy in your RING4 directory (replace "directory" with the name of your RING4 directory):
 
 ```bash
-cp -r ../directory ring
+cp -r ../<directory> ring
 ```
 
 Create an AlphaRING envrionment in which to run AlphaRING:
@@ -115,6 +115,25 @@ pip install absl-py==1.0.0 biopython==1.79 chex==0.1.86 dm-haiku==0.0.12 dm-tree
 ```
 
 ## Usage
+
+Activate the AlphaRING environment and run the script `run_alpharing.py` as follows:
+
+```bash
+source activate alpharing
+run_alpharing.py \
+  --fasta_paths=<path to wild-type FASTA>,<path to variant FASTA> \
+  --max_template_date=<maximum template date (yyyy-mm-dd)> \
+  --data_dir=<path to alphafold genetic databases> \
+  --output_dir=<path to directory to save all results> \
+  --uniref90_database_path=<path to uniref90.fasta> \
+  --mgnify_database_path=<path to mgy_clusters_2022_05.fa> \
+  --template_mmcif_dir=<path to mmcif_files> \
+  --obsolete_pdbs_path=<path to obsolete.dat> \
+  --bfd_database_path=<path to bfd_metaclust_clu_complete_id30_c90_final_seq.sorted_opt> \
+  --uniref30_database_path=<path to UniRef30_2021_03> \
+  --pdb70_database_path=<path to pdb70> \
+  --use_gpu_relax=<whether to relax with GPU (True or False)>
+```
 
 ## Downstream analysis
 
