@@ -30,9 +30,6 @@ For any given missense variant, AlphaRING conducts the following workflow:
 
    In this step, RING4 is used to generate a RIN of both the wild-type and variant model, capturing their non-covalent bonds.
 
-> [!NOTE]
-> RING4 refers to bonds as "edges" and residues as "nodes". AlphaRING's source code extensively uses this terminology.
-
 4. **Calculate residue weightings**
 
    In this step, AlphaRING assigns each non-covalent bond a weighting of importance to protein stability. Weightings are calculated using novel bond-type specific formulas that take into account bond-specific energy and geometry calculated by RING4. As the energy values provided by RING4 are fixed for a given bond-type, our formulas consider the bond's variable distance and angle to multiply energy by a value between `0–2`. Both distance and angle can 
@@ -68,20 +65,21 @@ For any given missense variant, AlphaRING conducts the following workflow:
     In this step, the absolute log2 of the FC is taken to provide a final metric, the AlphaRING score. This results in a minimum AlphaRING score of `0`. Therefore, higher 
     AlphaRING scores indicate greater predicted pathogenicity.
 
-## Installation
+## Dependencies
 
-> [!NOTE]  
-> Before installation, you will need a machine running Linux and a modern NVIDIA GPU. In addition, ensure you have the following dependencies:  
->  
-> [AlphaFold2 genetic databases](https://github.com/google-deepmind/alphafold/tree/f251de6613cb478207c732bf9627b1e853c99c2f#installation-and-running-your-first-prediction) (databases for AlphaFold-Multimer are not required) 
->  
-> [RING4](https://biocomputingup.it/services/download/) (request version v4.0-2-ge939f57)  
->
-> [Git](https://git-scm.com/downloads)
->    
-> [wget](https://www.tecmint.com/install-wget-in-linux/)
->    
-> [Anaconda3](https://www.anaconda.com/download)
+Before installation, you will need a machine running Linux and a modern NVIDIA GPU. In addition, ensure you have the following dependencies:  
+
+1. [AlphaFold2 genetic databases](https://github.com/google-deepmind/alphafold/tree/f251de6613cb478207c732bf9627b1e853c99c2f#installation-and-running-your-first-prediction) (databases for AlphaFold-Multimer are not required) 
+
+2. [RING4](https://biocomputingup.it/services/download/) (request version v4.0-2-ge939f57)  
+
+3. [Git](https://git-scm.com/downloads)
+
+4. [wget](https://www.tecmint.com/install-wget-in-linux/)
+ 
+5. [Anaconda3](https://www.anaconda.com/download)
+
+## Installation
 
 Firstly, `git clone` the AlphaRING repository (into the same parent directory as RING4) and `cd` into it:
 
@@ -102,9 +100,6 @@ wget -P alphafold/alphafold/common/ https://git.scicore.unibas.ch/schwede/openst
 cp -r ../<directory> ring
 ```
 
-> [!NOTE]
-> Replace `<directory>` with the name of your RING4 directory.
-
 `conda create` the `AlphaRING` environment and `source activate` it:
 
 ```bash
@@ -124,7 +119,7 @@ pip install absl-py==1.0.0 biopython==1.79 chex==0.1.86 dm-haiku==0.0.12 dm-tree
 
 ```bash
 source activate AlphaRING
-run_alpharing.py \
+<path to run_alpharing.py> \
   --fasta_paths=<path to wild-type FASTA>,<path to variant FASTA> \
   --max_template_date=<yyyy-mm-dd e.g. 2020-01-15> \
   --data_dir=<path to AlphaFold2 genetic databases dir> \
@@ -139,15 +134,8 @@ run_alpharing.py \
   --use_gpu_relax=<whether to relax with GPU i.e. True or False>
 ```
 
-> [!NOTE]  
-> Ensure each `<path>` is replaced with the actual path.
->
-> Ensure `<yyyy-mm-dd e.g. 2020-01-15>` is replaced with the actual date.
->
-> Ensure `<whether to relax with GPU i.e. True or False>` is replaced with `True` or `False`.
-
 > [!WARNING]
-> This is the minimum requirement to run AlphaRING. Specific users (particuarly HPC users) may need to include other packages in their shell script.  
+> These are the minimum requirement to run AlphaRING. Specific users (particuarly HPC users) may need to include other modules and more in their shell script.  
 
 ## Downstream analysis
 
