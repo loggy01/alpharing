@@ -1,6 +1,6 @@
 # AlphaRING
 
-AlphaRING is a package for the prediction of pathogenicity of any given missense variant. The package is a customised implementation of [AlphaFold2](https://github.com/google-deepmind/alphafold) that models a monomeric wild-type protein and a variant counterpart, and captures their non-covalent bonds using [RING4](https://ring.biocomputingup.it/). AlphaRING uses the differences in non-covalent bond formation to predict the pathogenicity of the missense variant.
+AlphaRING is a package for the prediction of pathogenicity of any given missense variant. The package is a customised implementation of [AlphaFold2](https://github.com/google-deepmind/alphafold) that models a monomeric wild-type protein and a missense variant counterpart, and captures their non-covalent bonds using [RING4](https://ring.biocomputingup.it/). AlphaRING uses the differences in non-covalent bond formation to predict the pathogenicity of the missense variant.
 
 An AlphaRING manuscript is currently under review by [RECOMB 2025](https://recomb.org/recomb2025/index.html). 
 
@@ -19,11 +19,11 @@ For any given missense variant, AlphaRING conducts the following workflow:
 
 1. **Accept FASTAs**: 
 
-   In this step, AlphaRING accepts two FASTAs: a monomeric wild-type protein and a counterpart variant differing by a single residue.
+   In this step, AlphaRING accepts two FASTAs: a monomeric wild-type protein and a counterpart missense variant differing by a single residue.
 
 2. **Predict structures**: 
 
-   In this step, AlphaFold2 is used to predict the structure of the wild-type and variant protein. The best model of each is relaxed and extracted.
+   In this step, AlphaFold2 is used to predict the structure of the wild-type and variant protein. The best model of each is relaxed and used going forward.
 
 3. **Generate residue interaction networks (RINs)**
 
@@ -34,17 +34,14 @@ For any given missense variant, AlphaRING conducts the following workflow:
 
 4. **Calculate residue weightings**
 
-   In this step, AlphaRING assigns each non-covalent bond (hydrogen, ionic, π-cation, π-π stacking, and π-hydrogen) a weighting of importance to protein stability.
-
-   Weightings are calculated using novel bond-type specific formulas that take into account bond-specific energy and geometry values provided by RING4. As the energy values provided by RING4 are 
-   fixed for a given bond-type, our formulas consider the variable bond distance and angle to multiply energy by a value between `0 and 2`. Both distance and angle can contribute a value between `0 
-   and 1` towards the multiplier. More favourable distances and angles result in a larger multiplier. Therefore, a higher bond weighting indicates greater importance to protein stability. 
+   In this step, AlphaRING assigns each non-covalent bond a weighting of importance to protein stability. Weightings are calculated using novel bond-type specific formulas that take into account bond-specific energy and geometry calculated by RING4. As the energy values provided by RING4 are fixed for a given bond-type, our formulas consider the variable bond distance and angle to multiply energy by a value between `0–2`. Both distance and angle can 
+   contribute a value between `0–1` towards the multiplier. More favourable distances and angles result in a larger multiplier. Therefore, a higher bond weighting indicates greater importance to protein stability. 
 
    Our bond-type specific formulas come in three flavours. The first flavour is used for instances where a shorter distance and smaller angle is favourable (π-cation and π-π stacking bonds):
    
-   $$
-   Bond_{weight} = energy \times \left( \left(1 - \left(\frac{distance}{distance_{max}}\right)\right) + \left(1 - \left(\frac{angle}{angle_{max}}\right)\right) \right)
-   $$
+> ```math
+> Bond_{weight} = energy \times \left( \left(1 - \left(\frac{distance}{distance_{max}}\right)\right) + \left(1 - \left(\frac{angle}{angle_{max}}\right)\right) \right)
+> ```
 
    The second flavour of bond-type specific formulas is used for instances where a shorter distance and larger angle is favourable (hydrogen bonds):
 
