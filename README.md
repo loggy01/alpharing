@@ -83,7 +83,7 @@ Before installation, you will need a machine running Linux and a modern NVIDIA G
 
 ## Installation
 
-Firstly, `git clone` the AlphaRING repository into the same parent directory as RING4 and `cd` into it:
+Firstly, `git clone` the `alpharing` repository into the same parent directory as RING4 and `cd` into it:
 
 ```bash
 git clone --recurse-submodules https://github.com/loggy01/alpharing
@@ -102,11 +102,11 @@ wget -P alphafold/alphafold/common/ https://git.scicore.unibas.ch/schwede/openst
 cp -r ../<directory> ring
 ```
 
-`conda create` the `AlphaRING` environment and `source activate` it:
+`conda create` the `alpharing` environment and `source activate` it:
 
 ```bash
-conda create -n AlphaRING -c bioconda -c conda-forge hhsuite hmmer kalign2 openmm=8.0.0 pdbfixer python=3.10
-source activate AlphaRING
+conda create -n alpharing -c bioconda -c conda-forge hhsuite hmmer kalign2 openmm=8.0.0 pdbfixer python=3.10
+source activate alpharing
 ```
 
 Finally, `pip install` necessary packages:
@@ -117,10 +117,10 @@ pip install absl-py==1.0.0 biopython==1.79 chex==0.1.86 dm-haiku==0.0.12 dm-tree
 
 ## Usage
 
-`source activate` the `AlphaRING` environment and run the script `run_alpharing.py` in a shell script as follows:
+`source activate` the `alpharing` environment and run the script `run_alpharing.py` in a shell script as follows:
 
 ```bash
-source activate AlphaRING
+source activate alpharing
 <path to run_alpharing.py> \
   --fasta_paths=<path to wild-type FASTA>,<path to variant FASTA> \
   --max_template_date=<yyyy-mm-dd e.g. 2020-01-15> \
