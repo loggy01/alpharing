@@ -121,19 +121,24 @@ Activate the AlphaRING environment and run the script `run_alpharing.py` as foll
 ```bash
 source activate alpharing
 run_alpharing.py \
-  --fasta_paths=<path to wild-type FASTA>,<path to variant FASTA> \
-  --max_template_date=<maximum template date (yyyy-mm-dd)> \
-  --data_dir=<path to alphafold genetic databases> \
-  --output_dir=<path to directory to save all results> \
-  --uniref90_database_path=<path to uniref90.fasta> \
-  --mgnify_database_path=<path to mgy_clusters_2022_05.fa> \
-  --template_mmcif_dir=<path to mmcif_files> \
-  --obsolete_pdbs_path=<path to obsolete.dat> \
-  --bfd_database_path=<path to bfd_metaclust_clu_complete_id30_c90_final_seq.sorted_opt> \
-  --uniref30_database_path=<path to UniRef30_2021_03> \
-  --pdb70_database_path=<path to pdb70> \
-  --use_gpu_relax=<whether to relax with GPU (True or False)>
+  --fasta_paths=path to wild-type FASTA,path to variant FASTA \
+  --max_template_date=maximum template date \
+  --data_dir=path to alphafold genetic databases \
+  --output_dir=path to directory to save all results \
+  --uniref90_database_path=path to uniref90.fasta \
+  --mgnify_database_path=path to mgy_clusters_2022_05.fa \
+  --template_mmcif_dir=path to mmcif_files \
+  --obsolete_pdbs_path=path to obsolete.dat \
+  --bfd_database_path=path to bfd_metaclust_clu_complete_id30_c90_final_seq.sorted_opt \
+  --uniref30_database_path=path to UniRef30_2021_03 \
+  --pdb70_database_path=path to pdb70 \
+  --use_gpu_relax=whether to relax with GPU
 ```
+Explanation of arguments:
+
+* Provide actual paths where indicated.
+* For `max_template_date`, ensure you enter your value in the format of `yyyy-mm-dd`.
+* For `use_gpu_relax`, ensure you enter either `True` or `False`.
 
 ## Downstream analysis
 
