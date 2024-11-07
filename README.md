@@ -33,7 +33,7 @@ For any given missense variant, AlphaRING conducts the following workflow:
 4. **Calculate residue weightings**
 
    In this step, AlphaRING assigns each non-covalent bond a weighting of importance to protein stability. Weightings are calculated using novel bond-type specific formulas that take into account bond-specific energy and geometry calculated by RING4. As the energy values provided by RING4 are fixed for a given bond-type, our formulas consider the bond's variable distance and angle to multiply energy by a value between `0–2`. Both distance and angle can 
-   contribute a value between `0–1` towards the multiplier. More favourable distances and angles result in a larger multiplier. Therefore, a higher bond weighting indicates greater importance to protein stability. 
+   contribute a value between `0–1` towards the multiplier. More favourable distances and angles result in a larger multiplier. Therefore, a higher bond weighting indicates greater importance to protein stability.
 
    Our bond-type specific formulas come in three flavours. The first flavour is used when a shorter distance and smaller angle is favourable (π-cation and π-π stacking bonds):
    
@@ -41,17 +41,20 @@ For any given missense variant, AlphaRING conducts the following workflow:
 > Bond_{weight} = energy \times \left( \left(1 - \left(\frac{distance}{distance_{max}}\right)\right) + \left(1 - \left(\frac{angle}{angle_{max}}\right)\right) \right)
 > ```
 
+
    The second flavour is used when a shorter distance and larger angle is favourable (hydrogen bonds):
 
 >```math
 > Bond_{weight} = energy \times \left( \left(1 - \left(\frac{distance}{distance_{max}}\right)\right) + \left(\frac{angle}{angle_{max}}\right)\right)
 > ```
 
+
    The third flavour is used when a shorter distance is favourable and angle is negligible (ionic and π-hydrogen bonds):
 
 >```math
 > Bond_{weight} = energy \times 2 \times \left(1 - \left(\frac{distance}{distance_{max}}\right)\right)
 > ```
+
 
    Each residue's weight in the wild-type and variant protein is calculated by summing the weight of all its bonds.
    
