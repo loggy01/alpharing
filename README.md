@@ -39,9 +39,9 @@ For any given missense variant, AlphaRING conducts the following workflow:
 
    Our bond-type specific formulas come in three flavours. The first flavour is used when a shorter distance and smaller angle is favourable (π-cation and π-π stacking):
 
-```math
-Bond_{weight} = energy \times \left( \left(1 - \left(\frac{distance}{distance_{max}}\right)\right) + \left(1 - \left(\frac{angle}{angle_{max}}\right)\right) \right)
-```
+>```math
+>Bond_{weight} = energy \times \left( \left(1 - \left(\frac{distance}{distance_{max}}\right)\right) + \left(1 - \left(\frac{angle}{angle_{max}}\right)\right) \right)
+>```
 
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The second flavour is used when a shorter distance and larger angle is favourable (hydrogen):
 
