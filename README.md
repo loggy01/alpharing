@@ -1,6 +1,6 @@
 # AlphaRING
 
-AlphaRING is a package for the prediction of pathogenicity of any given missense variant. The package is a customised implementation of [`AlphaFold2`](https://github.com/google-deepmind/alphafold) that models a monomeric wild-type protein and a variant counterpart, and captures their non-covalent bonds using [RING4](https://ring.biocomputingup.it/). AlphaRING uses the differences in non-covalent bond formation to predict the pathogenicity of the missense variant.
+AlphaRING is a package for the prediction of pathogenicity of any given missense variant. The package is a customised implementation of [AlphaFold2](https://github.com/google-deepmind/alphafold) that models a monomeric wild-type protein and a variant counterpart, and captures their non-covalent bonds using [RING4](https://ring.biocomputingup.it/). AlphaRING uses the differences in non-covalent bond formation to predict the pathogenicity of the missense variant.
 
 An AlphaRING manuscript is currently under review by [RECOMB 2025](https://recomb.org/recomb2025/index.html). AlphaRING benchmarking data will be made available soon.
 
@@ -41,7 +41,7 @@ For any given missense variant, AlphaRING conducts the following workflow:
    Our bond-type specific formulas come in three flavours. The first flavour is used for instances where a shorter distance and smaller angle is favourable (π-cation and π-π stacking bonds):
    
    $$
-   Bond_{weight} = energy \times \left( \left(1 - \left(\frac{distance}{distance_{max}}\right)\right) + \left(1 - \left(\frac{angle}{angle_{max}}\right)\right) \right)
+   ```Bond_{weight} = energy \times \left( \left(1 - \left(\frac{distance}{distance_{max}}\right)\right) + \left(1 - \left(\frac{angle}{angle_{max}}\right)\right) \right)```
    $$
 
    The second flavour of bond-type specific formulas is used for instances where a shorter distance and larger angle is favourable (hydrogen bonds):
