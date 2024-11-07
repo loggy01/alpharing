@@ -72,17 +72,47 @@ For any given missense variant, AlphaRING conducts the following workflow:
 ## Installation
 
 > [!NOTE]  
-> **Installation Requirements:**  
->  
 > Before installation, you will need a machine running Linux and a modern NVIDIA GPU. In addition, ensure you have the following dependencies:  
 >  
 > 1. [AlphaFold2 genetic databases](https://github.com/google-deepmind/alphafold/tree/f251de6613cb478207c732bf9627b1e853c99c2f#installation-and-running-your-first-prediction): Databases for AlphaFold-Multimer are not required.  
 >  
 > 2. [RING4](https://biocomputingup.it/services/download/): To ensure compatibility, request version v4.0-2-ge939f57.  
->  
-> 3. [Anaconda3](https://www.anaconda.com/download)
+>
+> 3. [Git](https://git-scm.com/downloads).
+>    
+> 4. [Anaconda3](https://www.anaconda.com/download)
 
-Firstly, create an AlphaRING environment
+Firstly, clone the AlphaRING repository (into the same parent directory as RING4):
+
+```bash
+git clone --recurse-submodules https://github.com/loggy01/alpharing
+```
+
+Add stereo_chemical_props.txt to AlphaFold2:
+
+```bash
+cd alpharing
+wget -P alphafold/alphafold/common/ https://git.scicore.unibas.ch/schwede/openstructure/-/raw/7102c63615b64735c4941278d92b554ec94415f8/modules/mol/alg/src/stereo_chemical_props.txt
+```
+
+Copy in your RING4 directory (replace <directory> with the name of your RING4 directory):
+
+```bash
+cp -r <directory> ring
+```
+
+Create an AlphaRING envrionment in which to run AlphaRING:
+
+```bash
+conda create -n alpharing -c bioconda -c conda-forge hhsuite hmmer kalign2 openmm=8.0.0 pdbfixer python=3.10
+source activate alpharing
+```
+
+Finally, install pip packages:
+
+```bash
+pip install absl-py==1.0.0 biopython==1.79 chex==0.1.86 dm-haiku==0.0.12 dm-tree==0.1.8 immutabledict==2.0.0 jax==0.4.25 ml-collections==0.1.0 numpy==1.24.3 pandas==2.0.3 plotly==5.15.0 scipy==1.11.1 tensorflow-cpu==2.16.1 jaxlib==0.4.25+cuda11.cudnn86 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+```
 
 ## Usage
 
