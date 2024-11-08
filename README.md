@@ -79,7 +79,7 @@ Before installation, you will need a machine running Linux and a modern NVIDIA G
 
 - [wget](https://www.tecmint.com/install-wget-in-linux/)
  
-- [Anaconda3](https://www.anaconda.com/download)
+- [Miniconda](https://docs.anaconda.com/miniconda/)
 
 ## Installation
 
