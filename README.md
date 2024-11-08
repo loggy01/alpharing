@@ -104,25 +104,25 @@ cp -r ../<dir> ring
 > [!NOTE]
 > Replace `<dir>` with the name of your RING4 directory.
 
-`conda create` the `alpharing` environment and `source activate` it:
+`conda create` the `alpharing` environment:
 
 ```bash
 conda create -n alpharing -c bioconda -c conda-forge hhsuite hmmer kalign2 openmm=8.0.0 pdbfixer python=3.10
-source activate alpharing
 ```
 
-Finally, `pip install` necessary packages:
+Finally, `conda activate` the `alpharing` environment and `pip install` necessary packages:
 
 ```bash
+conda activate alpharing
 pip install absl-py==1.0.0 biopython==1.79 chex==0.1.86 dm-haiku==0.0.12 dm-tree==0.1.8 immutabledict==2.0.0 jax==0.4.25 ml-collections==0.1.0 numpy==1.24.3 pandas==2.0.3 plotly==5.15.0 scipy==1.11.1 tensorflow-cpu==2.16.1 jaxlib==0.4.25+cuda11.cudnn86 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 ```
 
 ## Usage
 
-`source activate` the `alpharing` environment and run the script `run_alpharing.py` in a shell script as follows:
+`conda activate` the `alpharing` environment and run the script `run_alpharing.py` in a shell script as follows:
 
 ```bash
-source activate alpharing
+conda activate alpharing
 <path to run_alpharing.py> \
   --fasta_paths=<path to wild-type FASTA>,<path to variant FASTA> \
   --max_template_date=<yyyy-mm-dd e.g. 2020-01-15> \
