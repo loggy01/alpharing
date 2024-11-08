@@ -133,7 +133,7 @@ conda activate alpharing
   --template_mmcif_dir=<path to mmcif_files dir> \
   --obsolete_pdbs_path=<path to obsolete.dat> \
   --bfd_database_path=<path to bfd_metaclust_clu_complete_id30_c90_final_seq.sorted_opt> \
-  --uniref30_database_path=<path to UniRef30> \
+  --uniref30_database_path=<path to UniRef30_2021_03> \
   --pdb70_database_path=<path to pdb70> \
   --use_gpu_relax=<whether to relax with GPU i.e. True or False>
 ```
