@@ -138,10 +138,10 @@ conda activate alpharing
   --use_gpu_relax=<whether to relax with GPU i.e. True or False>
 ```
 > [!NOTE]
-> Replace argument values with your own.
+> Replace argument values with your own. AlphaFold2 databases named with dates may differ.
 
 > [!WARNING]
-> These are the minimum requirements to run AlphaRING. Specific users (particularly HPC users) may need to include other modules and more in their shell script.  
+> These are the minimum requirements to run AlphaRING. Specific users (particularly HPC users) may need to include more in their shell script.  
 
 ## Downstream analysis
 
