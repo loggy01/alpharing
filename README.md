@@ -5,7 +5,7 @@ AlphaRING is a package designed to predict the pathogenicity of any given missen
 > [!NOTE]
 > AlphaRING's source code refers to bonds as edges and residues as nodes.
 >  
-> An AlphaRING manuscript is currently under review by [RECOMB 2025](https://recomb.org/recomb2025/index.html). 
+> An AlphaRING manuscript is currently under review by [RECOMB 2025](https://recomb.org/recomb2025/index.html) and is available via [bioRxiv](https://www.biorxiv.org/content/10.1101/2024.11.12.623182v1).
 >
 > AlphaRING benchmarking data will be made available soon...
 
