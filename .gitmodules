@@ -1,0 +1,3 @@
+[submodule "alphafold"]
+	path = alphafold
+	url = https://github.com/loggy01/alphafold
