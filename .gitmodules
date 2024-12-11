@@ -1,3 +1,0 @@
-[submodule "alphafold"]
-	path = alphafold
-	url = https://github.com/google-deepmind/alphafold.git
