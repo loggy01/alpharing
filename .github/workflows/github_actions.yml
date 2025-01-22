@@ -42,6 +42,5 @@ jobs:
       - if: matrix.install-type == 'developer'
         run: |
           pip install .
-          pip install jaxlib==0.4.25+cuda11.cudnn86 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
           pip install pytest
           pytest tests/
