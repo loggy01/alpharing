@@ -4,12 +4,12 @@ build-backend = 'setuptools.build_meta'
 
 [project]
 name = 'alpharing'
-version = '1.0.0'
+version = '1.0.1'
 authors = [{name = 'Aaron Logsdon', email = 'aaron.logsdon19@imperial.ac.uk'}]
 description = 'AlphaFold-based prediction of pathogenicity for any given missense variant'
 urls = {'Homepage' = 'https://github.com/loggy01/alpharing'}
 readme = 'README.md'
-license = {file = "LICENSE"}
+license = {text = 'GPLv3'}
 classifiers = [
     'Programming Language :: Python :: 3',
     'Operating System :: POSIX :: Linux'
@@ -48,7 +48,6 @@ packages = [
     'alphafold.alphafold.relax',
     'ring'
 ]
-license-files = ["LICENSE"]
 
 [tool.setuptools.package-data]
 'alphafold.alphafold.common' = ['stereo_chemical_props.txt']
