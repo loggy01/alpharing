@@ -1,0 +1,54 @@
+[build-system]
+requires = ['setuptools<72.0.0']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'alpharing'
+version = '1.0.0'
+authors = [{name = 'Aaron Logsdon', email = 'aaron.logsdon19@imperial.ac.uk'}]
+description = 'AlphaFold-based prediction of pathogenicity for any given missense variant'
+urls = {'Homepage' = 'https://github.com/loggy01/alpharing'}
+readme = 'README.md'
+license = {file = "LICENSE"}
+classifiers = [
+    'Programming Language :: Python :: 3',
+    'Operating System :: POSIX :: Linux'
+]
+requires-python = '==3.10.*'
+dependencies = [
+    'absl-py==1.0.0',
+    'biopython==1.79',
+    'chex==0.1.86',
+    'dm-haiku==0.0.12',
+    'dm-tree==0.1.8',
+    'immutabledict==2.0.0',
+    'jax==0.4.25',
+    'ml-collections==0.1.0',
+    'numpy==1.24.3',
+    'pandas==2.0.3',
+    'scipy==1.11.1',
+    'tensorflow-cpu==2.16.1'
+]
+
+[project.scripts]
+run_alpharing = 'alpharing.run_alpharing:entry_point'
+
+[tool.setuptools]
+include-package-data = true
+packages = [
+    'alpharing',
+    'alphafold',
+    'alphafold.alphafold',
+    'alphafold.alphafold.common',
+    'alphafold.alphafold.data',
+    'alphafold.alphafold.data.tools',
+    'alphafold.alphafold.model',
+    'alphafold.alphafold.model.geometry',
+    'alphafold.alphafold.model.tf',
+    'alphafold.alphafold.relax',
+    'ring'
+]
+license-files = ["LICENSE"]
+
+[tool.setuptools.package-data]
+'alphafold.alphafold.common' = ['stereo_chemical_props.txt']
