@@ -1,0 +1,10 @@
+name: alpharing
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - hmmer 
+  - kalign2 
+  - pdbfixer 
+  - hhsuite=3.3.0 
+  - openmm=8.0.0
