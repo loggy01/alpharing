@@ -44,5 +44,4 @@ jobs:
           pip install .
           pip install jaxlib==0.4.25+cuda11.cudnn86 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
           pip install pytest
-      - run: |
           pytest tests/
