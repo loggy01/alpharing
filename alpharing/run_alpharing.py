@@ -93,7 +93,7 @@ def find_variable_residue(fasta_paths: list[str]) -> int:
             raise ValueError('One or both FASTAs contain an empty ID')
         if not fasta[0].seq.strip():
             raise ValueError('One or both FASTAs contain an empty sequence')
-        fastas.append(fasta)
+        fastas.append(fasta[0])
 
     # Check if the two FASTAs contain the same ID
     wildtype_id, variant_id = fastas[0].id, fastas[1].id
