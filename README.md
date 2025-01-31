@@ -77,7 +77,7 @@ You are now ready to use AlphaRING 🎉
 ### Developers
 
 To modify and develop AlphaRING, please 
- [add your SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) and do the following:
+[add your SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) and do the following:
 
 <details>
 <summary><b>Instructions</b></summary>
@@ -87,29 +87,37 @@ To modify and develop AlphaRING, please
 1. Clone the AlphaRING GitHub repository:
 
    ```bash
-   git clone --recurse-submodules git@github.com:loggy01/alpharing.git 
+   git clone --recurse-submodules git@github.com:loggy01/alpharing.git
+   cd alpharing
    ```
 
-2. Create the AlphaRING environment as described for users. Activate it, and install AlphaRING along with the AlphaFold submodule (this only needs to be done once, but it won’t work if you want to update the dependencies):
+2. Create the AlphaRING environment as described for users:
+
+   ```bash
+   conda create -n alpharing -c bioconda -c conda-forge python==3.10 hmmer kalign2 pdbfixer hhsuite==3.3.0 openmm==8.0.0
+   ```
+
+3. Activate the AlphaRING environment and install AlphaRING and the AlphaFold submodule (only needs to be done once):
 
    ```bash
    conda activate alpharing
-   cd alpharing
    pip install -e .
+   pip install jaxlib==0.4.25+cuda11.cudnn86 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
    pip install -e alphafold --no-deps
    ```
 
-3. Begin development. Any changes made in the activated environment will be recognised and should be tested:
+4. Begin development. Any changes made in the activated environment will be recognised and should be tested:
 
    ```bash
    pip install pytest
    pytest tests/
    ```
 
-4. Before pushing to the remote or submitting a pull request, ensure that you install and test AlphaRING:
+5. Before pushing to the remote or submitting a pull request, ensure that you install and test AlphaRING:
 
    ```bash
    pip install .
+   pip install jaxlib==0.4.25+cuda11.cudnn86 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
    pytest tests/
    ```
 
