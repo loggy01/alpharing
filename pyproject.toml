@@ -4,9 +4,9 @@ build-backend = 'setuptools.build_meta'
 
 [project]
 name = 'alpharing'
-version = '1.0.1'
+version = '1.0.2'
 authors = [{name = 'Aaron Logsdon', email = 'aaron.logsdon19@imperial.ac.uk'}]
-description = 'AlphaFold-based prediction of pathogenicity for any given missense variant'
+description = 'AlphaFold-based prediction of pathogenicity for any missense variant'
 urls = {'Homepage' = 'https://github.com/loggy01/alpharing'}
 readme = 'README.md'
 license = {text = 'GPLv3'}
