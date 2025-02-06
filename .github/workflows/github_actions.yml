@@ -15,7 +15,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ['3.10']
+        python-version: '3.10'
         install-type: ['user', 'developer']
 
     defaults:
@@ -41,8 +41,9 @@ jobs:
 
       - if: matrix.install-type == 'developer'
         run: |
-          pip install .
-          pip install jaxlib==0.4.25+cuda11.cudnn86 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html 
+          pip install -e .
+          pip install jaxlib==0.4.25+cuda11.cudnn86 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+          pip install -e alphafold --no-deps
 
       - run: |
           pip install pytest
