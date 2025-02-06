@@ -134,25 +134,32 @@ def run_alphafold(alphafold_input: dict[str, any]) -> list[str]:
     Returns:
         List of model paths (wild-type then variant).
     """
-    # Define the base AlphaFold command
-    alphafold_path = os.path.join(Path(__file__).parent.parent, 'alphafold', 'run_alphafold.py')
-    alphafold_command = f'python {alphafold_path}'
-
-    # Add parameters to the base AlphaFold command
-    for key, value in alphafold_input.items():
-        if key == 'fasta_paths':
-            value = ','.join(value)
-        alphafold_command += f' --{key}={str(value)}'
-    
-    # Run the complete AlphaFold command
-    subprocess.run(alphafold_command, shell=True, check=True)
-    
-    # Retrieve the model path for both the wild-type and variant predictions
-    model_paths = []
+    # Determine if either FASTA file already has a model
+    fasta_paths_to_run = []
+    model_path_patterns = {}
     for fasta_path in alphafold_input['fasta_paths']:
         subdir_name = Path(fasta_path).stem
         model_path_pattern = os.path.join(alphafold_input['output_dir'], subdir_name, 'relaxed*.pdb')
-        model_path = glob.glob(model_path_pattern)[0]
+        model_path_patterns[fasta_path] = model_path_pattern
+        if glob.glob(model_path_pattern):
+            logging.info(f'Found and will use pre-computed model for "{fasta_path}"')
+        else:
+            fasta_paths_to_run.append(fasta_path)
+
+    # Run AlphaFold for FASTA files that do not have a model
+    if fasta_paths_to_run:
+        alphafold_path = os.path.join(Path(__file__).parent.parent, 'alphafold', 'run_alphafold.py')
+        alphafold_command = f'python {alphafold_path}'
+        for key, value in alphafold_input.items():
+            if key == 'fasta_paths':
+                value = ','.join(fasta_paths_to_run)
+            alphafold_command += f' --{key}={str(value)}'
+        subprocess.run(alphafold_command, shell=True, check=True)
+
+    # Retrieve the model path for both the wild-type and variant predictions
+    model_paths = []
+    for fasta_path in alphafold_input['fasta_paths']:
+        model_path = glob.glob(model_path_patterns[fasta_path])[0]
         model_paths.append(model_path)
 
     return model_paths
