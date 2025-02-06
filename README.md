@@ -137,7 +137,8 @@ run_alpharing \
   --use_gpu_relax=True or False \
 ```
 
-For correct functioning, ensure the wild-type FASTA file is listed before the variant in `--fasta_paths`. For more information on running AlphaRING, execute `run_alpharing --helpfull` in the activated environment.
+> [!WARNING]
+> For correct functioning, ensure the wild-type FASTA file is listed before the variant in `--fasta_paths`. For more information on running AlphaRING, execute `run_alpharing --helpfull` in the activated environment.
 
 ## Downstream
 
@@ -168,6 +169,8 @@ Here is the structure of a wild-type or variant output subdirectory produced fro
    unrelaxed_model_{1,2,3,4,5}_pred_0.cif             # AlphaFold
    unrelaxed_model_{1,2,3,4,5}_pred_0.pdb             # AlphaFold
 ```
+> [!NOTE]
+> To save time and avoid redundancy, when running a prediction, AlphaRING will check both FASTA files for an existing corresponding output subdirectory containing a relaxed model PDB file, and will skip the AlphaFold stage only for the FASTA files that do. This feature is especially useful for consecutive AlphaRING predictions when the wild-type FASTA file remains unchanged but the variant FASTA file varies.
 
 ## Citation
 
