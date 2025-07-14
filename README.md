@@ -10,6 +10,9 @@ To predict the pathogenicity of a missense variant, AlphaRING performs the follo
 
 Therefore, AlphaRING is both scalable and transparent, enabling researchers to obtain explicit, biophysically-based predictions of the pathogenicity of missense variants.
 
+> [!NOTE]
+> Version 2 (AlphaRING-X) coming soon...here is a sneak peek from our ISMB/ECCB 2025 presentation: https://iscb.junolive.co/ISMB/live/exhibitor/ISMBECCB2025_poster_1714
+
 ## Overview
 
 Here is an overview of the three-step AlphaRING workflow:
