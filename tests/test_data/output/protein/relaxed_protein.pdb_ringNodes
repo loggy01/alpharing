@@ -1,0 +1,296 @@
+NodeId	Chain	Position	Residue	Type	Dssp	Degree	Bfactor_CA	x	y	z	pdbFileName	Model
+A:1:_:SER	A	1	SER	RES	 	12	90.200	18.571	13.241	14.930	relaxed_model_3_pred_0.pdb#1.A	1
+A:2:_:PRO	A	2	PRO	RES	H	6	89.890	14.875	13.928	13.916	relaxed_model_3_pred_0.pdb#2.A	1
+A:3:_:ALA	A	3	ALA	RES	H	3	91.130	16.207	16.134	11.061	relaxed_model_3_pred_0.pdb#3.A	1
+A:4:_:GLU	A	4	GLU	RES	H	15	92.100	18.461	13.273	9.746	relaxed_model_3_pred_0.pdb#4.A	1
+A:5:_:LEU	A	5	LEU	RES	H	11	91.530	15.493	10.877	9.946	relaxed_model_3_pred_0.pdb#5.A	1
+A:6:_:HIS	A	6	HIS	RES	H	22	92.850	13.413	13.366	7.891	relaxed_model_3_pred_0.pdb#6.A	1
+A:7:_:SER	A	7	SER	RES	H	4	91.010	16.218	13.920	5.303	relaxed_model_3_pred_0.pdb#7.A	1
+A:8:_:PHE	A	8	PHE	RES	H	13	89.270	16.420	10.125	4.791	relaxed_model_3_pred_0.pdb#8.A	1
+A:9:_:THR	A	9	THR	RES	H	8	91.230	12.701	9.115	5.017	relaxed_model_3_pred_0.pdb#9.A	1
+A:10:_:HIS	A	10	HIS	RES	T	16	91.140	10.521	12.240	4.512	relaxed_model_3_pred_0.pdb#10.A	1
+A:11:_:CYS	A	11	CYS	RES	 	10	89.770	8.449	10.942	7.479	relaxed_model_3_pred_0.pdb#11.A	1
+A:12:_:GLY	A	12	GLY	RES	 	6	86.800	5.505	13.025	8.782	relaxed_model_3_pred_0.pdb#12.A	1
+A:13:_:GLN	A	13	GLN	RES	H	10	87.410	5.295	15.403	11.782	relaxed_model_3_pred_0.pdb#13.A	1
+A:14:_:THR	A	14	THR	RES	H	8	86.320	4.092	12.729	14.284	relaxed_model_3_pred_0.pdb#14.A	1
+A:15:_:ALA	A	15	ALA	RES	H	10	86.910	7.056	10.453	13.417	relaxed_model_3_pred_0.pdb#15.A	1
+A:16:_:LEU	A	16	LEU	RES	H	18	90.330	9.475	13.339	14.203	relaxed_model_3_pred_0.pdb#16.A	1
+A:17:_:THR	A	17	THR	RES	H	9	89.670	7.697	14.062	17.522	relaxed_model_3_pred_0.pdb#17.A	1
+A:18:_:LEU	A	18	LEU	RES	H	5	87.280	8.045	10.356	18.466	relaxed_model_3_pred_0.pdb#18.A	1
+A:19:_:GLN	A	19	GLN	RES	H	4	88.460	11.824	10.780	17.799	relaxed_model_3_pred_0.pdb#19.A	1
+A:20:_:GLY	A	20	GLY	RES	H	3	89.980	12.013	13.621	20.390	relaxed_model_3_pred_0.pdb#20.A	1
+A:21:_:ALA	A	21	ALA	RES	 	8	90.940	11.331	16.683	18.168	relaxed_model_3_pred_0.pdb#21.A	1
+A:22:_:THR	A	22	THR	RES	 	15	92.480	8.966	19.366	19.495	relaxed_model_3_pred_0.pdb#22.A	1
+A:23:_:THR	A	23	THR	RES	H	5	90.950	5.777	20.034	17.433	relaxed_model_3_pred_0.pdb#23.A	1
+A:24:_:THR	A	24	THR	RES	H	5	92.450	7.351	23.376	16.314	relaxed_model_3_pred_0.pdb#24.A	1
+A:25:_:GLU	A	25	GLU	RES	H	19	92.460	10.721	21.754	15.384	relaxed_model_3_pred_0.pdb#25.A	1
+A:26:_:ALA	A	26	ALA	RES	H	8	91.360	8.872	19.017	13.447	relaxed_model_3_pred_0.pdb#26.A	1
+A:27:_:SER	A	27	SER	RES	H	10	91.240	6.827	21.698	11.557	relaxed_model_3_pred_0.pdb#27.A	1
+A:28:_:ASN	A	28	ASN	RES	H	8	93.380	10.044	23.668	10.809	relaxed_model_3_pred_0.pdb#28.A	1
+A:29:_:ILE	A	29	ILE	RES	H	13	92.930	11.806	20.504	9.457	relaxed_model_3_pred_0.pdb#29.A	1
+A:30:_:LEU	A	30	LEU	RES	H	12	89.730	8.810	19.770	7.154	relaxed_model_3_pred_0.pdb#30.A	1
+A:31:_:ARG	A	31	ARG	RES	H	6	89.440	8.652	23.426	5.968	relaxed_model_3_pred_0.pdb#31.A	1
+A:32:_:SER	A	32	SER	RES	H	5	91.060	12.422	23.670	5.253	relaxed_model_3_pred_0.pdb#32.A	1
+A:33:_:CYS	A	33	CYS	RES	 	12	91.240	12.454	20.390	3.233	relaxed_model_3_pred_0.pdb#33.A	1
+A:34:_:HIS	A	34	HIS	RES	H	4	89.600	12.588	21.246	-0.524	relaxed_model_3_pred_0.pdb#34.A	1
+A:35:_:ALA	A	35	ALA	RES	H	9	87.210	11.276	17.796	-1.641	relaxed_model_3_pred_0.pdb#35.A	1
+A:36:_:CYS	A	36	CYS	RES	H	10	86.770	8.297	17.969	0.800	relaxed_model_3_pred_0.pdb#36.A	1
+A:37:_:ARG	A	37	ARG	RES	H	8	84.120	7.400	21.527	-0.415	relaxed_model_3_pred_0.pdb#37.A	1
+A:38:_:GLY	A	38	GLY	RES	H	3	71.730	7.292	20.441	-4.105	relaxed_model_3_pred_0.pdb#38.A	1
+A:39:_:GLY	A	39	GLY	RES	G	5	59.200	5.618	17.028	-3.542	relaxed_model_3_pred_0.pdb#39.A	1
+A:40:_:ASN	A	40	ASN	RES	 	0	51.400	2.105	17.747	-2.107	relaxed_model_3_pred_0.pdb#40.A	1
+A:41:_:PRO	A	41	PRO	RES	 	0	44.000	-0.625	16.398	-4.441	relaxed_model_3_pred_0.pdb#41.A	1
+A:42:_:GLN	A	42	GLN	RES	 	0	42.790	-2.475	15.401	-1.244	relaxed_model_3_pred_0.pdb#42.A	1
+A:43:_:HIS	A	43	HIS	RES	 	0	35.230	-5.586	16.452	-3.136	relaxed_model_3_pred_0.pdb#43.A	1
+A:44:_:GLN	A	44	GLN	RES	 	0	36.630	-8.495	15.694	-0.808	relaxed_model_3_pred_0.pdb#44.A	1
+A:45:_:MET	A	45	MET	RES	 	0	42.890	-9.310	12.212	-2.171	relaxed_model_3_pred_0.pdb#45.A	1
+A:46:_:PRO	A	46	PRO	RES	 	1	35.930	-12.904	11.300	-1.105	relaxed_model_3_pred_0.pdb#46.A	1
+A:47:_:ARG	A	47	ARG	RES	 	0	42.000	-13.599	9.448	2.179	relaxed_model_3_pred_0.pdb#47.A	1
+A:48:_:GLY	A	48	GLY	RES	 	0	39.050	-15.528	6.739	0.282	relaxed_model_3_pred_0.pdb#48.A	1
+A:49:_:HIS	A	49	HIS	RES	 	0	46.640	-16.834	3.757	2.316	relaxed_model_3_pred_0.pdb#49.A	1
+A:50:_:ILE	A	50	ILE	RES	 	4	56.410	-14.045	1.400	1.164	relaxed_model_3_pred_0.pdb#50.A	1
+A:51:_:ARG	A	51	ARG	RES	 	1	53.390	-14.898	-2.249	2.021	relaxed_model_3_pred_0.pdb#51.A	1
+A:52:_:ARG	A	52	ARG	RES	 	1	68.330	-12.281	-2.826	4.748	relaxed_model_3_pred_0.pdb#52.A	1
+A:53:_:GLY	A	53	GLY	RES	 	2	64.240	-11.326	-6.212	6.092	relaxed_model_3_pred_0.pdb#53.A	1
+A:54:_:LEU	A	54	LEU	RES	S	0	76.040	-12.541	-6.618	9.699	relaxed_model_3_pred_0.pdb#54.A	1
+A:55:_:LEU	A	55	LEU	RES	S	13	83.760	-9.112	-8.090	10.707	relaxed_model_3_pred_0.pdb#55.A	1
+A:56:_:PRO	A	56	PRO	RES	T	5	90.010	-5.425	-8.071	9.553	relaxed_model_3_pred_0.pdb#56.A	1
+A:57:_:ASN	A	57	ASN	RES	T	16	92.500	-4.855	-10.188	6.396	relaxed_model_3_pred_0.pdb#57.A	1
+A:58:_:HIS	A	58	HIS	RES	T	9	90.320	-8.609	-10.543	5.797	relaxed_model_3_pred_0.pdb#58.A	1
+A:59:_:ILE	A	59	ILE	RES	E	4	90.230	-8.861	-8.657	2.453	relaxed_model_3_pred_0.pdb#59.A	1
+A:60:_:TRP	A	60	TRP	RES	E	17	93.970	-5.951	-7.391	0.355	relaxed_model_3_pred_0.pdb#60.A	1
+A:61:_:GLN	A	61	GLN	RES	E	11	92.770	-6.075	-5.071	-2.652	relaxed_model_3_pred_0.pdb#61.A	1
+A:62:_:GLY	A	62	GLY	RES	E	5	93.610	-3.506	-5.641	-5.433	relaxed_model_3_pred_0.pdb#62.A	1
+A:63:_:ASP	A	63	ASP	RES	E	11	93.690	-2.570	-3.337	-8.339	relaxed_model_3_pred_0.pdb#63.A	1
+A:64:_:ILE	A	64	ILE	RES	E	7	94.520	0.279	-2.874	-10.856	relaxed_model_3_pred_0.pdb#64.A	1
+A:65:_:THR	A	65	THR	RES	E	8	94.590	1.386	0.754	-10.814	relaxed_model_3_pred_0.pdb#65.A	1
+A:66:_:HIS	A	66	HIS	RES	E	6	95.160	3.781	2.509	-13.160	relaxed_model_3_pred_0.pdb#66.A	1
+A:67:_:PHE	A	67	PHE	RES	E	10	95.050	6.471	4.926	-11.918	relaxed_model_3_pred_0.pdb#67.A	1
+A:68:_:LYS	A	68	LYS	RES	E	1	93.220	8.416	6.862	-14.595	relaxed_model_3_pred_0.pdb#68.A	1
+A:69:_:TYR	A	69	TYR	RES	E	10	90.130	11.703	8.512	-13.599	relaxed_model_3_pred_0.pdb#69.A	1
+A:70:_:LYS	A	70	LYS	RES	T	2	88.270	14.015	10.034	-16.249	relaxed_model_3_pred_0.pdb#70.A	1
+A:71:_:ASN	A	71	ASN	RES	T	0	89.720	13.947	7.572	-19.233	relaxed_model_3_pred_0.pdb#71.A	1
+A:72:_:THR	A	72	THR	RES	E	4	92.280	13.133	4.478	-17.070	relaxed_model_3_pred_0.pdb#72.A	1
+A:73:_:LEU	A	73	LEU	RES	E	4	94.650	9.638	3.015	-16.565	relaxed_model_3_pred_0.pdb#73.A	1
+A:74:_:TYR	A	74	TYR	RES	E	13	95.900	9.335	1.037	-13.311	relaxed_model_3_pred_0.pdb#74.A	1
+A:75:_:ARG	A	75	ARG	RES	E	6	96.630	6.546	-1.549	-12.787	relaxed_model_3_pred_0.pdb#75.A	1
+A:76:_:LEU	A	76	LEU	RES	E	9	97.200	5.545	-1.755	-9.131	relaxed_model_3_pred_0.pdb#76.A	1
+A:77:_:HIS	A	77	HIS	RES	E	18	97.010	3.326	-4.573	-7.906	relaxed_model_3_pred_0.pdb#77.A	1
+A:78:_:VAL	A	78	VAL	RES	E	9	96.460	1.558	-3.125	-4.839	relaxed_model_3_pred_0.pdb#78.A	1
+A:79:_:TRP	A	79	TRP	RES	E	21	96.370	-0.364	-5.066	-2.174	relaxed_model_3_pred_0.pdb#79.A	1
+A:80:_:VAL	A	80	VAL	RES	E	7	94.260	-2.409	-3.352	0.561	relaxed_model_3_pred_0.pdb#80.A	1
+A:81:_:ASP	A	81	ASP	RES	E	15	92.890	-4.067	-4.814	3.650	relaxed_model_3_pred_0.pdb#81.A	1
+A:82:_:THR	A	82	THR	RES	T	8	88.700	-7.526	-3.165	3.695	relaxed_model_3_pred_0.pdb#82.A	1
+A:83:_:PHE	A	83	PHE	RES	T	8	86.890	-7.697	-3.385	7.519	relaxed_model_3_pred_0.pdb#83.A	1
+A:84:_:SER	A	84	SER	RES	T	14	88.470	-4.310	-1.919	8.569	relaxed_model_3_pred_0.pdb#84.A	1
+A:85:_:GLY	A	85	GLY	RES	T	4	90.190	-3.490	-0.042	5.331	relaxed_model_3_pred_0.pdb#85.A	1
+A:86:_:ALA	A	86	ALA	RES	E	3	93.970	-0.029	-1.759	5.452	relaxed_model_3_pred_0.pdb#86.A	1
+A:87:_:ILE	A	87	ILE	RES	E	13	95.790	1.647	-1.877	2.024	relaxed_model_3_pred_0.pdb#87.A	1
+A:88:_:SER	A	88	SER	RES	E	4	97.100	4.005	-4.323	0.314	relaxed_model_3_pred_0.pdb#88.A	1
+A:89:_:ALA	A	89	ALA	RES	E	6	97.650	5.563	-3.223	-2.992	relaxed_model_3_pred_0.pdb#89.A	1
+A:90:_:THR	A	90	THR	RES	E	6	97.100	7.998	-4.992	-5.348	relaxed_model_3_pred_0.pdb#90.A	1
+A:91:_:GLN	A	91	GLN	RES	E	5	96.600	9.600	-3.800	-8.593	relaxed_model_3_pred_0.pdb#91.A	1
+A:92:_:LYS	A	92	LYS	RES	E	14	96.360	9.198	-6.266	-11.502	relaxed_model_3_pred_0.pdb#92.A	1
+A:93:_:ARG	A	93	ARG	RES	S	2	94.180	10.581	-6.213	-15.080	relaxed_model_3_pred_0.pdb#93.A	1
+A:94:_:LYS	A	94	LYS	RES	S	1	94.510	7.289	-7.350	-16.724	relaxed_model_3_pred_0.pdb#94.A	1
+A:95:_:GLU	A	95	GLU	RES	 	7	94.420	3.538	-7.495	-15.918	relaxed_model_3_pred_0.pdb#95.A	1
+A:96:_:THR	A	96	THR	RES	 	7	96.480	3.303	-11.294	-16.313	relaxed_model_3_pred_0.pdb#96.A	1
+A:97:_:SER	A	97	SER	RES	H	7	96.200	1.337	-13.815	-14.203	relaxed_model_3_pred_0.pdb#97.A	1
+A:98:_:SER	A	98	SER	RES	H	3	97.140	4.693	-15.247	-12.956	relaxed_model_3_pred_0.pdb#98.A	1
+A:99:_:GLU	A	99	GLU	RES	H	15	97.660	5.886	-11.785	-11.759	relaxed_model_3_pred_0.pdb#99.A	1
+A:100:_:ALA	A	100	ALA	RES	H	11	97.390	2.502	-11.076	-10.075	relaxed_model_3_pred_0.pdb#100.A	1
+A:101:_:ILE	A	101	ILE	RES	H	10	97.810	2.746	-14.512	-8.314	relaxed_model_3_pred_0.pdb#101.A	1
+A:102:_:SER	A	102	SER	RES	H	10	97.900	6.358	-13.773	-7.259	relaxed_model_3_pred_0.pdb#102.A	1
+A:103:_:SER	A	103	SER	RES	H	13	97.370	5.246	-10.347	-5.913	relaxed_model_3_pred_0.pdb#103.A	1
+A:104:_:LEU	A	104	LEU	RES	H	12	97.870	2.294	-11.977	-4.074	relaxed_model_3_pred_0.pdb#104.A	1
+A:105:_:LEU	A	105	LEU	RES	H	6	98.090	4.608	-14.553	-2.386	relaxed_model_3_pred_0.pdb#105.A	1
+A:106:_:GLN	A	106	GLN	RES	H	9	97.620	6.997	-11.743	-1.286	relaxed_model_3_pred_0.pdb#106.A	1
+A:107:_:ALA	A	107	ALA	RES	H	12	97.520	3.997	-9.797	0.108	relaxed_model_3_pred_0.pdb#107.A	1
+A:108:_:ILE	A	108	ILE	RES	H	14	97.600	2.770	-12.967	1.949	relaxed_model_3_pred_0.pdb#108.A	1
+A:109:_:ALA	A	109	ALA	RES	H	3	97.020	6.269	-13.376	3.467	relaxed_model_3_pred_0.pdb#109.A	1
+A:110:_:HIS	A	110	HIS	RES	H	8	94.150	6.220	-9.719	4.689	relaxed_model_3_pred_0.pdb#110.A	1
+A:111:_:LEU	A	111	LEU	RES	H	7	94.900	2.560	-9.191	5.792	relaxed_model_3_pred_0.pdb#111.A	1
+A:112:_:GLY	A	112	GLY	RES	 	5	95.210	1.237	-12.804	6.151	relaxed_model_3_pred_0.pdb#112.A	1
+A:113:_:LYS	A	113	LYS	RES	 	4	95.820	-1.289	-14.855	4.106	relaxed_model_3_pred_0.pdb#113.A	1
+A:114:_:PRO	A	114	PRO	RES	 	7	95.370	-4.555	-13.077	3.083	relaxed_model_3_pred_0.pdb#114.A	1
+A:115:_:SER	A	115	SER	RES	S	7	94.060	-8.000	-14.754	3.060	relaxed_model_3_pred_0.pdb#115.A	1
+A:116:_:TYR	A	116	TYR	RES	E	12	92.710	-9.245	-12.650	0.100	relaxed_model_3_pred_0.pdb#116.A	1
+A:117:_:ILE	A	117	ILE	RES	E	11	93.550	-7.452	-10.800	-2.706	relaxed_model_3_pred_0.pdb#117.A	1
+A:118:_:ASN	A	118	ASN	RES	E	8	90.880	-9.098	-8.075	-4.794	relaxed_model_3_pred_0.pdb#118.A	1
+A:119:_:THR	A	119	THR	RES	E	14	92.190	-7.345	-6.991	-8.067	relaxed_model_3_pred_0.pdb#119.A	1
+A:120:_:ASP	A	120	ASP	RES	 	5	89.300	-8.213	-5.346	-11.384	relaxed_model_3_pred_0.pdb#120.A	1
+A:121:_:ASN	A	121	ASN	RES	S	6	89.050	-8.928	-7.383	-14.571	relaxed_model_3_pred_0.pdb#121.A	1
+A:122:_:GLY	A	122	GLY	RES	 	4	89.350	-5.237	-6.988	-15.624	relaxed_model_3_pred_0.pdb#122.A	1
+A:123:_:PRO	A	123	PRO	RES	H	4	92.910	-3.865	-9.897	-17.813	relaxed_model_3_pred_0.pdb#123.A	1
+A:124:_:ALA	A	124	ALA	RES	H	5	93.870	-1.509	-10.992	-14.983	relaxed_model_3_pred_0.pdb#124.A	1
+A:125:_:TYR	A	125	TYR	RES	H	20	94.000	-4.382	-11.417	-12.448	relaxed_model_3_pred_0.pdb#125.A	1
+A:126:_:ILE	A	126	ILE	RES	H	8	93.870	-6.980	-13.040	-14.800	relaxed_model_3_pred_0.pdb#126.A	1
+A:127:_:SER	A	127	SER	RES	S	11	95.680	-4.362	-15.654	-15.848	relaxed_model_3_pred_0.pdb#127.A	1
+A:128:_:GLN	A	128	GLN	RES	H	6	96.700	-4.903	-19.360	-15.088	relaxed_model_3_pred_0.pdb#128.A	1
+A:129:_:ASP	A	129	ASP	RES	H	5	97.170	-1.495	-19.413	-13.286	relaxed_model_3_pred_0.pdb#129.A	1
+A:130:_:PHE	A	130	PHE	RES	H	19	97.000	-2.519	-16.631	-10.855	relaxed_model_3_pred_0.pdb#130.A	1
+A:131:_:LEU	A	131	LEU	RES	H	9	96.410	-5.929	-18.268	-10.196	relaxed_model_3_pred_0.pdb#131.A	1
+A:132:_:ASN	A	132	ASN	RES	H	9	97.640	-4.205	-21.669	-9.628	relaxed_model_3_pred_0.pdb#132.A	1
+A:133:_:MET	A	133	MET	RES	H	10	97.260	-1.763	-20.031	-7.148	relaxed_model_3_pred_0.pdb#133.A	1
+A:134:_:CYS	A	134	CYS	RES	H	12	96.880	-4.621	-18.315	-5.248	relaxed_model_3_pred_0.pdb#134.A	1
+A:135:_:THR	A	135	THR	RES	H	7	96.720	-6.486	-21.675	-5.151	relaxed_model_3_pred_0.pdb#135.A	1
+A:136:_:SER	A	136	SER	RES	H	3	96.960	-3.386	-23.615	-3.900	relaxed_model_3_pred_0.pdb#136.A	1
+A:137:_:LEU	A	137	LEU	RES	H	8	96.370	-2.936	-21.065	-1.045	relaxed_model_3_pred_0.pdb#137.A	1
+A:138:_:ALA	A	138	ALA	RES	H	4	97.150	-6.708	-21.241	-0.225	relaxed_model_3_pred_0.pdb#138.A	1
+A:139:_:ILE	A	139	ILE	RES	 	6	96.480	-7.015	-17.513	-1.122	relaxed_model_3_pred_0.pdb#139.A	1
+A:140:_:ARG	A	140	ARG	RES	E	9	94.230	-10.324	-16.282	-2.579	relaxed_model_3_pred_0.pdb#140.A	1
+A:141:_:HIS	A	141	HIS	RES	E	6	94.230	-9.504	-14.084	-5.581	relaxed_model_3_pred_0.pdb#141.A	1
+A:142:_:THR	A	142	THR	RES	E	6	90.400	-12.049	-11.527	-6.845	relaxed_model_3_pred_0.pdb#142.A	1
+A:143:_:THR	A	143	THR	RES	E	3	85.600	-11.721	-8.823	-9.512	relaxed_model_3_pred_0.pdb#143.A	1
+A:144:_:HIS	A	144	HIS	RES	 	13	76.090	-13.336	-5.378	-9.431	relaxed_model_3_pred_0.pdb#144.A	1
+A:145:_:VAL	A	145	VAL	RES	 	1	64.700	-15.314	-4.026	-12.385	relaxed_model_3_pred_0.pdb#145.A	1
+A:146:_:PRO	A	146	PRO	RES	T	1	54.560	-13.501	-1.105	-14.104	relaxed_model_3_pred_0.pdb#146.A	1
+A:147:_:TYR	A	147	TYR	RES	T	0	49.520	-14.906	2.221	-12.735	relaxed_model_3_pred_0.pdb#147.A	1
+A:148:_:ASN	A	148	ASN	RES	 	7	55.960	-15.879	1.037	-9.205	relaxed_model_3_pred_0.pdb#148.A	1
+A:149:_:PRO	A	149	PRO	RES	H	4	52.230	-13.776	3.567	-7.132	relaxed_model_3_pred_0.pdb#149.A	1
+A:150:_:THR	A	150	THR	RES	H	2	57.610	-15.230	2.090	-3.908	relaxed_model_3_pred_0.pdb#150.A	1
+A:151:_:SER	A	151	SER	RES	H	10	59.160	-13.463	-1.287	-4.476	relaxed_model_3_pred_0.pdb#151.A	1
+A:152:_:SER	A	152	SER	RES	H	12	69.930	-10.046	0.087	-5.742	relaxed_model_3_pred_0.pdb#152.A	1
+A:153:_:GLY	A	153	GLY	RES	H	4	79.340	-9.780	3.431	-3.864	relaxed_model_3_pred_0.pdb#153.A	1
+A:154:_:LEU	A	154	LEU	RES	H	9	83.470	-7.413	2.071	-1.138	relaxed_model_3_pred_0.pdb#154.A	1
+A:155:_:VAL	A	155	VAL	RES	H	16	88.400	-4.768	0.609	-3.509	relaxed_model_3_pred_0.pdb#155.A	1
+A:156:_:GLU	A	156	GLU	RES	H	8	89.120	-5.004	3.751	-5.729	relaxed_model_3_pred_0.pdb#156.A	1
+A:157:_:ARG	A	157	ARG	RES	H	11	86.070	-4.443	5.939	-2.608	relaxed_model_3_pred_0.pdb#157.A	1
+A:158:_:SER	A	158	SER	RES	H	11	91.140	-1.535	3.674	-1.566	relaxed_model_3_pred_0.pdb#158.A	1
+A:159:_:ASN	A	159	ASN	RES	H	13	92.970	-0.014	3.990	-5.080	relaxed_model_3_pred_0.pdb#159.A	1
+A:160:_:GLY	A	160	GLY	RES	H	8	92.170	-0.294	7.821	-4.879	relaxed_model_3_pred_0.pdb#160.A	1
+A:161:_:ILE	A	161	ILE	RES	H	8	92.270	1.499	7.856	-1.466	relaxed_model_3_pred_0.pdb#161.A	1
+A:162:_:LEU	A	162	LEU	RES	H	9	94.840	4.212	5.436	-2.717	relaxed_model_3_pred_0.pdb#162.A	1
+A:163:_:LYS	A	163	LYS	RES	H	10	94.820	4.891	7.446	-5.941	relaxed_model_3_pred_0.pdb#163.A	1
+A:164:_:THR	A	164	THR	RES	H	11	92.450	4.986	10.716	-3.947	relaxed_model_3_pred_0.pdb#164.A	1
+A:165:_:LEU	A	165	LEU	RES	H	14	93.600	7.685	9.296	-1.606	relaxed_model_3_pred_0.pdb#165.A	1
+A:166:_:LEU	A	166	LEU	RES	H	10	95.030	9.675	7.839	-4.545	relaxed_model_3_pred_0.pdb#166.A	1
+A:167:_:TYR	A	167	TYR	RES	H	7	92.750	9.603	11.272	-6.272	relaxed_model_3_pred_0.pdb#167.A	1
+A:168:_:LYS	A	168	LYS	RES	H	17	92.310	10.949	12.923	-3.055	relaxed_model_3_pred_0.pdb#168.A	1
+A:169:_:TYR	A	169	TYR	RES	H	21	93.630	13.785	10.357	-2.692	relaxed_model_3_pred_0.pdb#169.A	1
+A:170:_:PHE	A	170	PHE	RES	H	17	92.580	14.781	10.759	-6.375	relaxed_model_3_pred_0.pdb#170.A	1
+A:171:_:THR	A	171	THR	RES	H	5	90.660	14.701	14.585	-5.947	relaxed_model_3_pred_0.pdb#171.A	1
+A:172:_:ASP	A	172	ASP	RES	H	4	90.460	17.153	14.361	-3.000	relaxed_model_3_pred_0.pdb#172.A	1
+A:173:_:LYS	A	173	LYS	RES	 	6	91.520	19.221	11.372	-4.336	relaxed_model_3_pred_0.pdb#173.A	1
+A:174:_:PRO	A	174	PRO	RES	T	5	90.640	18.961	10.975	-8.174	relaxed_model_3_pred_0.pdb#174.A	1
+A:175:_:ASP	A	175	ASP	RES	T	0	91.710	21.302	7.896	-8.142	relaxed_model_3_pred_0.pdb#175.A	1
+A:176:_:LEU	A	176	LEU	RES	 	7	92.910	19.409	5.947	-5.401	relaxed_model_3_pred_0.pdb#176.A	1
+A:177:_:PRO	A	177	PRO	RES	 	4	94.270	18.689	2.324	-6.549	relaxed_model_3_pred_0.pdb#177.A	1
+A:178:_:MET	A	178	MET	RES	H	19	94.510	14.910	1.737	-6.910	relaxed_model_3_pred_0.pdb#178.A	1
+A:179:_:ASP	A	179	ASP	RES	H	5	94.240	14.968	-1.309	-4.536	relaxed_model_3_pred_0.pdb#179.A	1
+A:180:_:ASN	A	180	ASN	RES	H	6	95.940	16.476	0.927	-1.799	relaxed_model_3_pred_0.pdb#180.A	1
+A:181:_:ALA	A	181	ALA	RES	H	11	96.290	13.969	3.729	-2.616	relaxed_model_3_pred_0.pdb#181.A	1
+A:182:_:LEU	A	182	LEU	RES	H	14	96.350	11.106	1.164	-2.284	relaxed_model_3_pred_0.pdb#182.A	1
+A:183:_:SER	A	183	SER	RES	H	7	96.380	12.557	-0.221	0.991	relaxed_model_3_pred_0.pdb#183.A	1
+A:184:_:ILE	A	184	ILE	RES	H	12	96.360	12.757	3.332	2.479	relaxed_model_3_pred_0.pdb#184.A	1
+A:185:_:ALA	A	185	ALA	RES	H	11	96.360	9.229	4.122	1.152	relaxed_model_3_pred_0.pdb#185.A	1
+A:186:_:LEU	A	186	LEU	RES	H	10	96.720	7.771	0.921	2.711	relaxed_model_3_pred_0.pdb#186.A	1
+A:187:_:TRP	A	187	TRP	RES	H	15	96.060	9.609	1.626	6.003	relaxed_model_3_pred_0.pdb#187.A	1
+A:188:_:THR	A	188	THR	RES	H	15	94.340	8.265	5.230	6.029	relaxed_model_3_pred_0.pdb#188.A	1
+A:189:_:ILE	A	189	ILE	RES	H	13	94.500	4.688	4.157	5.149	relaxed_model_3_pred_0.pdb#189.A	1
+A:190:_:ASN	A	190	ASN	RES	H	10	95.450	4.382	1.076	7.397	relaxed_model_3_pred_0.pdb#190.A	1
+A:191:_:HIS	A	191	HIS	RES	H	9	94.330	6.605	1.816	10.422	relaxed_model_3_pred_0.pdb#191.A	1
+A:192:_:LEU	A	192	LEU	RES	H	6	92.150	7.161	5.622	10.708	relaxed_model_3_pred_0.pdb#192.A	1
+A:193:_:ASN	A	193	ASN	RES	 	5	89.880	3.944	7.380	9.625	relaxed_model_3_pred_0.pdb#193.A	1
+A:194:_:VAL	A	194	VAL	RES	E	6	85.720	1.340	7.391	12.438	relaxed_model_3_pred_0.pdb#194.A	1
+A:195:_:LEU	A	195	LEU	RES	E	5	81.920	-2.382	7.341	11.589	relaxed_model_3_pred_0.pdb#195.A	1
+A:196:_:THR	A	196	THR	RES	G	0	74.640	-4.169	10.400	13.107	relaxed_model_3_pred_0.pdb#196.A	1
+A:197:_:ASN	A	197	ASN	RES	G	0	74.540	-7.344	8.472	14.100	relaxed_model_3_pred_0.pdb#197.A	1
+A:198:_:CYS	A	198	CYS	RES	G	2	76.870	-5.717	5.657	16.166	relaxed_model_3_pred_0.pdb#198.A	1
+A:199:_:HIS	A	199	HIS	RES	T	3	83.430	-2.201	7.032	16.995	relaxed_model_3_pred_0.pdb#199.A	1
+A:200:_:LYS	A	200	LYS	RES	E	5	86.730	-0.688	3.788	15.566	relaxed_model_3_pred_0.pdb#200.A	1
+A:201:_:THR	A	201	THR	RES	E	11	91.570	1.541	2.985	12.600	relaxed_model_3_pred_0.pdb#201.A	1
+A:202:_:ARG	A	202	ARG	RES	H	14	92.910	0.109	0.714	9.860	relaxed_model_3_pred_0.pdb#202.A	1
+A:203:_:TRP	A	203	TRP	RES	H	20	94.220	2.475	-2.041	11.107	relaxed_model_3_pred_0.pdb#203.A	1
+A:204:_:GLN	A	204	GLN	RES	H	13	91.770	1.246	-1.687	14.741	relaxed_model_3_pred_0.pdb#204.A	1
+A:205:_:LEU	A	205	LEU	RES	H	12	89.120	-2.371	-1.814	13.480	relaxed_model_3_pred_0.pdb#205.A	1
+A:206:_:HIS	A	206	HIS	RES	H	21	91.290	-1.524	-4.880	11.319	relaxed_model_3_pred_0.pdb#206.A	1
+A:207:_:HIS	A	207	HIS	RES	G	8	89.860	-0.158	-6.737	14.408	relaxed_model_3_pred_0.pdb#207.A	1
+A:208:_:SER	A	208	SER	RES	S	9	82.620	-3.027	-5.564	16.639	relaxed_model_3_pred_0.pdb#208.A	1
+A:209:_:PRO	A	209	PRO	RES	 	0	75.530	-4.971	-8.371	18.378	relaxed_model_3_pred_0.pdb#209.A	1
+A:210:_:ARG	A	210	ARG	RES	 	5	68.520	-8.327	-9.281	16.802	relaxed_model_3_pred_0.pdb#210.A	1
+A:211:_:LEU	A	211	LEU	RES	 	0	65.960	-11.025	-6.989	18.224	relaxed_model_3_pred_0.pdb#211.A	1
+A:212:_:GLN	A	212	GLN	RES	 	0	62.130	-13.032	-9.296	20.474	relaxed_model_3_pred_0.pdb#212.A	1
+A:213:_:PRO	A	213	PRO	RES	 	0	59.300	-16.686	-9.542	19.349	relaxed_model_3_pred_0.pdb#213.A	1
+A:214:_:ILE	A	214	ILE	RES	 	0	65.150	-18.602	-7.251	21.706	relaxed_model_3_pred_0.pdb#214.A	1
+A:215:_:PRO	A	215	PRO	RES	 	2	58.560	-20.977	-9.846	23.247	relaxed_model_3_pred_0.pdb#215.A	1
+A:216:_:GLU	A	216	GLU	RES	S	0	61.110	-24.436	-8.635	22.091	relaxed_model_3_pred_0.pdb#216.A	1
+A:217:_:THR	A	217	THR	RES	 	0	47.660	-25.298	-10.165	25.484	relaxed_model_3_pred_0.pdb#217.A	1
+A:218:_:ARG	A	218	ARG	RES	 	2	47.640	-23.991	-7.320	27.544	relaxed_model_3_pred_0.pdb#218.A	1
+A:219:_:SER	A	219	SER	RES	 	0	48.500	-26.252	-8.569	30.323	relaxed_model_3_pred_0.pdb#219.A	1
+A:220:_:LEU	A	220	LEU	RES	 	1	52.010	-28.054	-5.332	31.282	relaxed_model_3_pred_0.pdb#220.A	1
+A:221:_:SER	A	221	SER	RES	T	0	46.990	-27.077	-6.367	34.855	relaxed_model_3_pred_0.pdb#221.A	1
+A:222:_:ASN	A	222	ASN	RES	T	0	47.290	-27.884	-3.315	36.995	relaxed_model_3_pred_0.pdb#222.A	1
+A:223:_:LYS	A	223	LYS	RES	 	2	53.830	-27.886	-0.129	35.027	relaxed_model_3_pred_0.pdb#223.A	1
+A:224:_:GLN	A	224	GLN	RES	 	0	58.620	-29.742	2.033	37.545	relaxed_model_3_pred_0.pdb#224.A	1
+A:225:_:THR	A	225	THR	RES	 	4	66.790	-32.687	2.949	35.309	relaxed_model_3_pred_0.pdb#225.A	1
+A:226:_:HIS	A	226	HIS	RES	 	10	84.990	-33.953	6.471	35.957	relaxed_model_3_pred_0.pdb#226.A	1
+A:227:_:TRP	A	227	TRP	RES	E	10	89.460	-37.568	7.646	35.845	relaxed_model_3_pred_0.pdb#227.A	1
+A:228:_:TYR	A	228	TYR	RES	E	16	89.750	-38.361	10.321	33.228	relaxed_model_3_pred_0.pdb#228.A	1
+A:229:_:TYR	A	229	TYR	RES	E	12	89.930	-41.048	12.707	32.164	relaxed_model_3_pred_0.pdb#229.A	1
+A:230:_:PHE	A	230	PHE	RES	E	12	87.200	-40.899	12.694	28.337	relaxed_model_3_pred_0.pdb#230.A	1
+A:231:_:LYS	A	231	LYS	RES	 	13	85.990	-42.160	14.328	25.098	relaxed_model_3_pred_0.pdb#231.A	1
+A:232:_:LEU	A	232	LEU	RES	 	4	81.760	-42.868	12.332	21.929	relaxed_model_3_pred_0.pdb#232.A	1
+A:233:_:PRO	A	233	PRO	RES	T	1	70.520	-40.758	13.355	18.860	relaxed_model_3_pred_0.pdb#233.A	1
+A:234:_:GLY	A	234	GLY	RES	T	0	68.980	-42.759	14.554	15.796	relaxed_model_3_pred_0.pdb#234.A	1
+A:235:_:LEU	A	235	LEU	RES	S	1	61.410	-46.121	15.366	17.471	relaxed_model_3_pred_0.pdb#235.A	1
+A:236:_:ASN	A	236	ASN	RES	 	0	60.530	-46.840	19.066	18.325	relaxed_model_3_pred_0.pdb#236.A	1
+A:237:_:SER	A	237	SER	RES	 	0	57.910	-47.420	17.501	21.823	relaxed_model_3_pred_0.pdb#237.A	1
+A:238:_:ARG	A	238	ARG	RES	 	4	71.670	-46.354	20.281	24.234	relaxed_model_3_pred_0.pdb#238.A	1
+A:239:_:GLN	A	239	GLN	RES	S	0	82.860	-47.489	17.978	27.115	relaxed_model_3_pred_0.pdb#239.A	1
+A:240:_:TRP	A	240	TRP	RES	 	17	86.600	-45.028	16.013	29.277	relaxed_model_3_pred_0.pdb#240.A	1
+A:241:_:LYS	A	241	LYS	RES	B	4	85.240	-45.961	12.292	29.748	relaxed_model_3_pred_0.pdb#241.A	1
+A:242:_:GLY	A	242	GLY	RES	 	1	83.770	-44.846	9.968	32.607	relaxed_model_3_pred_0.pdb#242.A	1
+A:243:_:PRO	A	243	PRO	RES	 	10	87.560	-43.090	9.502	34.957	relaxed_model_3_pred_0.pdb#243.A	1
+A:244:_:GLN	A	244	GLN	RES	E	14	86.730	-41.877	6.269	33.268	relaxed_model_3_pred_0.pdb#244.A	1
+A:245:_:GLU	A	245	GLU	RES	E	3	87.490	-38.873	4.032	34.019	relaxed_model_3_pred_0.pdb#245.A	1
+A:246:_:ALA	A	246	ALA	RES	 	8	86.150	-36.312	3.978	31.188	relaxed_model_3_pred_0.pdb#246.A	1
+A:247:_:LEU	A	247	LEU	RES	S	1	84.020	-35.688	0.437	29.844	relaxed_model_3_pred_0.pdb#247.A	1
+A:248:_:GLN	A	248	GLN	RES	E	7	82.650	-32.254	1.574	28.588	relaxed_model_3_pred_0.pdb#248.A	1
+A:249:_:GLU	A	249	GLU	RES	E	7	81.320	-30.007	4.671	28.630	relaxed_model_3_pred_0.pdb#249.A	1
+A:250:_:ALA	A	250	ALA	RES	E	6	76.720	-27.534	5.481	25.821	relaxed_model_3_pred_0.pdb#250.A	1
+A:251:_:ALA	A	251	ALA	RES	T	0	76.270	-25.307	8.470	24.929	relaxed_model_3_pred_0.pdb#251.A	1
+A:252:_:GLY	A	252	GLY	RES	T	2	78.260	-27.928	11.213	24.228	relaxed_model_3_pred_0.pdb#252.A	1
+A:253:_:ALA	A	253	ALA	RES	E	10	85.190	-31.250	9.269	24.590	relaxed_model_3_pred_0.pdb#253.A	1
+A:254:_:ALA	A	254	ALA	RES	E	10	86.060	-33.361	6.961	26.804	relaxed_model_3_pred_0.pdb#254.A	1
+A:255:_:LEU	A	255	LEU	RES	E	12	88.160	-35.588	4.054	25.669	relaxed_model_3_pred_0.pdb#255.A	1
+A:256:_:ILE	A	256	ILE	RES	E	5	87.520	-39.027	4.804	27.193	relaxed_model_3_pred_0.pdb#256.A	1
+A:257:_:PRO	A	257	PRO	RES	E	9	85.660	-42.042	2.411	27.004	relaxed_model_3_pred_0.pdb#257.A	1
+A:258:_:VAL	A	258	VAL	RES	E	5	82.750	-44.654	4.688	25.351	relaxed_model_3_pred_0.pdb#258.A	1
+A:259:_:SER	A	259	SER	RES	E	9	77.260	-47.262	1.858	25.296	relaxed_model_3_pred_0.pdb#259.A	1
+A:260:_:ALA	A	260	ALA	RES	T	0	75.930	-47.608	-1.745	26.610	relaxed_model_3_pred_0.pdb#260.A	1
+A:261:_:SER	A	261	SER	RES	T	0	77.860	-46.181	-3.037	23.255	relaxed_model_3_pred_0.pdb#261.A	1
+A:262:_:SER	A	262	SER	RES	E	10	80.260	-43.973	-0.104	22.084	relaxed_model_3_pred_0.pdb#262.A	1
+A:263:_:ALA	A	263	ALA	RES	E	3	85.310	-40.788	1.545	23.336	relaxed_model_3_pred_0.pdb#263.A	1
+A:264:_:GLN	A	264	GLN	RES	E	5	84.750	-39.227	4.631	21.694	relaxed_model_3_pred_0.pdb#264.A	1
+A:265:_:TRP	A	265	TRP	RES	E	8	86.640	-35.800	6.250	21.875	relaxed_model_3_pred_0.pdb#265.A	1
+A:266:_:ILE	A	266	ILE	RES	E	14	86.410	-36.350	9.742	23.296	relaxed_model_3_pred_0.pdb#266.A	1
+A:267:_:PRO	A	267	PRO	RES	E	4	88.010	-33.445	12.266	22.966	relaxed_model_3_pred_0.pdb#267.A	1
+A:268:_:TRP	A	268	TRP	RES	G	18	84.130	-32.176	14.003	26.180	relaxed_model_3_pred_0.pdb#268.A	1
+A:269:_:ARG	A	269	ARG	RES	G	0	85.250	-33.721	17.367	25.105	relaxed_model_3_pred_0.pdb#269.A	1
+A:270:_:LEU	A	270	LEU	RES	G	8	87.000	-37.214	15.743	25.424	relaxed_model_3_pred_0.pdb#270.A	1
+A:271:_:LEU	A	271	LEU	RES	E	22	88.270	-36.575	14.117	28.870	relaxed_model_3_pred_0.pdb#271.A	1
+A:272:_:LYS	A	272	LYS	RES	E	7	88.600	-36.789	15.357	32.512	relaxed_model_3_pred_0.pdb#272.A	1
+A:273:_:ARG	A	273	ARG	RES	E	5	86.550	-35.591	13.198	35.439	relaxed_model_3_pred_0.pdb#273.A	1
+A:274:_:ALA	A	274	ALA	RES	E	6	82.840	-38.321	12.147	37.920	relaxed_model_3_pred_0.pdb#274.A	1
+A:275:_:ALA	A	275	ALA	RES	 	0	80.450	-38.412	10.477	41.348	relaxed_model_3_pred_0.pdb#275.A	1
+A:276:_:CYS	A	276	CYS	RES	 	0	76.210	-39.593	6.834	41.544	relaxed_model_3_pred_0.pdb#276.A	1
+A:277:_:PRO	A	277	PRO	RES	 	6	69.650	-43.393	6.885	42.271	relaxed_model_3_pred_0.pdb#277.A	1
+A:278:_:ARG	A	278	ARG	RES	 	1	66.330	-43.726	5.437	45.817	relaxed_model_3_pred_0.pdb#278.A	1
+A:279:_:PRO	A	279	PRO	RES	 	1	52.930	-46.312	2.590	45.895	relaxed_model_3_pred_0.pdb#279.A	1
+A:280:_:VAL	A	280	VAL	RES	T	0	48.980	-49.520	3.909	47.546	relaxed_model_3_pred_0.pdb#280.A	1
+A:281:_:GLY	A	281	GLY	RES	T	0	44.360	-49.003	2.121	50.922	relaxed_model_3_pred_0.pdb#281.A	1
+A:282:_:GLY	A	282	GLY	RES	S	1	35.010	-45.317	2.544	52.050	relaxed_model_3_pred_0.pdb#282.A	1
+A:283:_:PRO	A	283	PRO	RES	 	0	39.590	-44.627	4.330	55.430	relaxed_model_3_pred_0.pdb#283.A	1
+A:284:_:ALA	A	284	ALA	RES	 	0	40.720	-43.679	8.027	55.137	relaxed_model_3_pred_0.pdb#284.A	1
+A:285:_:ASP	A	285	ASP	RES	 	0	40.980	-39.923	8.528	55.657	relaxed_model_3_pred_0.pdb#285.A	1
+A:286:_:PRO	A	286	PRO	RES	S	0	49.900	-39.642	11.930	57.557	relaxed_model_3_pred_0.pdb#286.A	1
+A:287:_:LYS	A	287	LYS	RES	 	0	43.310	-36.533	13.159	55.590	relaxed_model_3_pred_0.pdb#287.A	1
+A:288:_:GLU	A	288	GLU	RES	 	1	37.830	-37.510	14.809	52.339	relaxed_model_3_pred_0.pdb#288.A	1
+A:289:_:LYS	A	289	LYS	RES	 	0	32.160	-38.098	18.444	53.220	relaxed_model_3_pred_0.pdb#289.A	1
+A:290:_:ASP	A	290	ASP	RES	 	0	32.090	-36.785	21.022	50.759	relaxed_model_3_pred_0.pdb#290.A	1
+A:291:_:LEU	A	291	LEU	RES	 	0	34.670	-35.860	20.729	47.148	relaxed_model_3_pred_0.pdb#291.A	1
+A:292:_:GLN	A	292	GLN	RES	 	0	31.890	-38.480	23.185	45.818	relaxed_model_3_pred_0.pdb#292.A	1
+A:293:_:HIS	A	293	HIS	RES	 	0	28.980	-36.928	26.632	46.097	relaxed_model_3_pred_0.pdb#293.A	1
+A:294:_:HIS	A	294	HIS	RES	 	0	31.430	-35.211	28.728	43.690	relaxed_model_3_pred_0.pdb#294.A	1
+A:295:_:GLY	A	295	GLY	RES	 	0	33.090	-35.176	30.598	40.448	relaxed_model_3_pred_0.pdb#295.A	1
