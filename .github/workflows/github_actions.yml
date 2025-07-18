@@ -35,7 +35,7 @@ jobs:
       
       - name: Install AlphaRING
         run: |
-          pip install alpharing
+          pip install -e .
       
       - name: Run AlphaRING tests
         run: |
