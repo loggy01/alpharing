@@ -66,4 +66,12 @@ Argument breakdown:
 AlphaRING stores the output in a subdirectory within the directory specified by `--output_dir`. The subdirectory is named after the basename of the FASTA file specified by `--fasta_path`. In addition to the default AlphaFold, RING, and FoldX outputs, the subdirectory contains the file `alpharing_scores.txt`, which summarises the feature values, deleteriousness probability, and feature SHAP values of each substitution specified by `--substitutions`.
 
 > [!NOTE]
+<<<<<<< HEAD
 > For efficiency, when running a prediction, AlphaRING will check if the FASTA file specified by `--fasta_path` already has its corresponding output subdirectory with an AlphaFold relaxed model file, and, if found, will skip running AlphaFold.
+=======
+> To save time and avoid redundancy, when running a prediction, AlphaRING will check both FASTA files for an existing corresponding output subdirectory containing a relaxed model PDB file, and will skip the AlphaFold stage only for the FASTA files that do. This feature is especially useful for consecutive AlphaRING predictions when the wild-type FASTA file remains unchanged but the variant FASTA file varies.
+
+## Citation
+
+If you have used any aspect of the AlphaRING package, please cite the associated [publication](https://www.biorxiv.org/content/10.1101/2024.11.12.623182v2). In addition, please cite the AlphaFold [publication](https://www.nature.com/articles/s41586-021-03819-2) and RING [publication](https://academic.oup.com/nar/article/52/W1/W306/7660079).
+>>>>>>> b0d73e4f374a19475ad97faae84e96f5fb5100e3
