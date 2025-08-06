@@ -11,9 +11,6 @@ To predict the deleteriousness of a missense variant, AlphaRING performs the fol
 5. Feeds pLDDT, degree, ΔΔG, and RSP into an in-house [XGBoost](https://github.com/dmlc/xgboost) classifier trained to classify missense variant deleteriousness.
 6. Outputs the probability of deleteriousness and feature SHAP values to explain the prediction mechanistically.
 
-> [!NOTE]
-> AlphaRING-X manuscript and benchmarking data/scripts (including for classifier training/calibrating/testing) will be released soon.
-
 ## Installation
 
 Before installation, ensure you have a Linux machine equipped with a modern NVIDIA GPU and the following:
